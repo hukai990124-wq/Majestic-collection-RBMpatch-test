@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="Majestic Collection - RBM Compatibility" />
+  <Id value="MajesticCollection_RBM_Patch" />
+  <Version value="v1.2.0" />
+  <ModuleCategory value="Singleplayer" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <Official value="false" />
+  <DependedModules>
+    <DependedModule Id="RBM" Optional="false" />
+    <DependedModule Id="MajesticCollection" Optional="false" />
+  </DependedModules>
+  <SubModules />
+  <Xmls>
+    <XmlNode>
+      <XmlName id="Items" path="rbm_compat_items" />
+      <IncludedGameTypes>
+        <GameType value="Campaign" />
+        <GameType value="CampaignStoryMode" />
+        <GameType value="CustomGame" />
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="CraftingPieces" path="rbm_compat_pieces" />
+      <IncludedGameTypes>
+        <GameType value="Campaign" />
+        <GameType value="CampaignStoryMode" />
+        <GameType value="CustomGame" />
+      </IncludedGameTypes>
+    </XmlNode>
+  </Xmls>
+</Module>
