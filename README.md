@@ -1,5 +1,7 @@
 # Majestic Collection — RBM 兼容补丁
 
+[简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
+
 2026-10-25 更新，补丁版本 v1.2.0。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据，补齐当前 MajesticCollection 的装备及武器适配。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
