@@ -1,0 +1,1 @@
+# Majestic-collection-RBMpatch-test
