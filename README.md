@@ -5,7 +5,7 @@
 <details>
 <summary><strong>简体中文</strong></summary>
 
-2026-10-25 更新，补丁版本 v1.2.0。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据，补齐当前 MajesticCollection 的装备及武器适配。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
+2026-10-30 更新，补丁版本 v1.3.0。本次为西班牙方阵（Tercio）系列补充 RBM 适配，并清理指向已删除物品的遗留规则。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
 
@@ -13,14 +13,13 @@
 
 启用顺序：RBM → MajesticCollection → MajesticCollection_RBM_Patch。补丁必须在主模组和 RBM 之后加载。未使用 RBM 时只启用 MajesticCollection。
 
-## 本次补齐
+## 本次更新
 
-- 覆盖主模组当前 44 件装备、14 把组合武器和 39 个锻造部件。
-- 补入剃刀党服装、国土佣仆与双薪剑士装备、龙饰头盔、两套马铠和龙纹缺口竞技盾的缺失适配。
-- 补入轻型竞技枪、圆环匕首、镀金新月弯刀、随身剑、华饰锤和双头龙剑的伤害系数适配。
-- 新增 44 条字段规则；当前共覆盖 72 个防护字段和 23 个伤害系数。两套马铠补上 RBM 使用的分区防护。
-- 保留全部原有适配数值，并保留 14 条旧版物品字段规则，方便兼容较旧的主模组。完整覆盖校验以当前主模组为准。
-- 97 个物品和部件名称继续继承主模组的中文翻译；双头龙剑仍仅可双手使用。
+- 新增 10 条规则，覆盖西班牙方阵（Tercio）系列 6 件装备：精英头盔、精英胸甲、精英肩甲、精英战靴、精英护手与长矛兵胸甲。
+- 上述目标值全部沿用本补丁中原始防护值完全相同的既有规则，未引入新的平衡判断。
+- 删除 14 条指向已不存在物品的遗留规则，涉及旧 knightly 系列、gold_maxmilian 系列，以及两件改名前后的旧编号。当前已无孤儿规则。
+- 覆盖主模组 50 件装备、14 把组合武器和 39 个锻造部件；共 82 个防护字段和 23 个伤害系数，无遗漏项、无部分覆盖项。
+- 103 个物品和部件名称中有 102 个继承主模组的中文翻译；长矛兵胸甲的中文名尚未补入主模组语言文件。双头龙剑仍仅可双手使用。
 
 所有新增数值、参考部件和取值依据见 [BALANCE_UPDATES.md](BALANCE_UPDATES.md)。新增数值是兼容性平衡目标，不代表已在战斗中验证。
 
@@ -53,7 +52,7 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 <details>
 <summary><strong>English</strong></summary>
 
-Updated on 2026-10-25. Patch version: v1.2.0. This update completes equipment and weapon compatibility for the current MajesticCollection using official XML data from RBM v4.5.4 / Bannerlord v1.4.8 as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-10-30. Patch version: v1.3.0. This update adds RBM compatibility for the Tercio series and removes legacy rules that pointed at items no longer present in the base mod. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -63,12 +62,11 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
-- Covers the base mod's current 44 equipment items, 14 crafted weapons, and 39 crafting pieces.
-- Adds missing compatibility settings for Peaky Blinder clothing, Landsknecht and Doppelsoldner equipment, the dragon-decorated helmet, two horse armors, and the Dragon Boucher shield.
-- Adds damage-factor settings for the light jousting lance, rondel dagger, gilded crescent saber, side sword, decorated mace, and gilded dragon sword.
-- Adds 44 field rules, bringing current coverage to 72 protection fields and 23 damage factors. Both horse armors receive RBM's regional protection fields.
-- Preserves all previous compatibility values and retains 14 legacy item-field rules for older base-mod versions. Full coverage is verified against the current base mod.
-- All 97 item and piece names continue to inherit the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
+- Adds 10 rules covering the 6 Tercio series items: elite helmet, elite cuirass, elite shoulders, elite boots, elite gauntlets, and pikeman cuirass.
+- Every target value reuses an existing rule whose base-module protection value is identical, so no new balance judgement is introduced.
+- Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
+- Covers the base mod's 50 equipment items, 14 crafted weapons, and 39 crafting pieces; 82 protection fields and 23 damage factors, with no gaps and no partial coverage.
+- 102 of 103 item and piece names inherit the base mod's Chinese translations; the pikeman cuirass has no Chinese string in the base module yet. The gilded dragon sword remains two-handed only.
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.
 
@@ -101,7 +99,7 @@ This update uses the fixed reference commit 7f9069b6e111c7ce124f07545f0edef82020
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-10-25 更新。パッチのバージョンは v1.2.0 です。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考に、現在の MajesticCollection の装備・武器に不足していた互換設定を補完しました。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-10-30 更新。パッチのバージョンは v1.3.0 です。テルシオ（Tercio）シリーズの RBM 互換設定を追加し、本体 MOD から削除されたアイテムを対象としていた旧ルールを整理しました。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
@@ -111,12 +109,11 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 
 ## 今回の更新内容
 
-- 本体 MOD に現在定義されている装備 44 点、組み立て式武器 14 点、鍛冶パーツ 39 点を対象としています。
-- Peaky Blinder の衣服、ランツクネヒトとドッペルゼルドナーの装備、竜飾り付き兜、2 種類の馬鎧、Dragon Boucher 盾の互換設定を補完しました。
-- 軽量ジョスティングランス、ロンデルダガー、金装の三日月サーベル、サイドソード、装飾メイス、金装の双頭竜剣のダメージ係数を追加しました。
-- 44 件のフィールドルールを追加し、現在は防御値 72 項目とダメージ係数 23 項目に対応しています。2 種類の馬鎧には、RBM が使用する部位別の防御値を追加しました。
-- 従来の互換設定値はすべて維持し、旧バージョンの本体 MOD 向けのアイテムフィールドルール 14 件も残しています。網羅性の検証は現在の本体 MOD を基準としています。
-- アイテムとパーツの名称 97 件は、引き続き本体 MOD の中国語翻訳を継承します。金装の双頭竜剣は両手専用のままです。
+- テルシオ（Tercio）シリーズ 6 点（エリート兜・エリート胸甲・エリート肩甲・エリートブーツ・エリート籠手・長槍兵胸甲）を対象に、10 件のルールを追加しました。
+- 目標値はすべて、本体 MOD 側の防御値が完全に一致する既存ルールを踏襲しており、新たなバランス判断は行っていません。
+- 本体 MOD から削除されたアイテムを対象としていた旧ルール 14 件（旧 knightly シリーズ、gold_maxmilian シリーズ、改名前の旧 ID 2 件）を削除しました。孤立したルールは残っていません。
+- 本体 MOD の装備 50 点、組み立て式武器 14 点、鍛冶パーツ 39 点を対象とし、防御値 82 項目・ダメージ係数 23 項目に対応しています。未対応・部分対応はありません。
+- 名称 103 件のうち 102 件は本体 MOD の中国語翻訳を継承しています。長槍兵胸甲の中国語名は本体 MOD の言語ファイルに未登録です。金装の双頭竜剣は両手専用のままです。
 
 追加した数値、参照アイテム、設定理由は [BALANCE_UPDATES.md](BALANCE_UPDATES.md) を参照してください。これらの数値は互換性のためのバランス調整目標であり、実戦で検証済みの値ではありません。
 
