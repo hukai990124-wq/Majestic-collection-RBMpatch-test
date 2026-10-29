@@ -17,6 +17,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
 - Covers the base mod's 50 equipment items, 14 crafted weapons, and 39 crafting pieces; 82 protection fields and 23 damage factors, with no gaps and no partial coverage.
 - 102 of 103 item and piece names inherit the base mod's Chinese translations; the pikeman cuirass has no Chinese string in the base module yet. The gilded dragon sword remains two-handed only.
+- Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.
 
@@ -43,3 +44,9 @@ If new equipment is later added to the base mod without corresponding RBM rules,
 Official RBM source: [Fellow93/RealisticBattleProject](https://github.com/Fellow93/RealisticBattleProject/tree/7f9069b6e111c7ce124f07545f0edef8202042bf/RBMXML).
 
 This update uses the fixed reference commit 7f9069b6e111c7ce124f07545f0edef8202042bf. Its SubModule.xml specifies RBM v4.5.4 / Bannerlord v1.4.8. Check your installed game and RBM versions before use.
+
+## License
+
+Released under the **MIT License**; see [LICENSE](LICENSE) for the full text. You may use, modify, and redistribute this patch freely, including commercially, as long as the copyright notice is retained.
+
+This patch contains no files from RBM or MajesticCollection. It only transforms the data they provide at load time. RBM and MajesticCollection remain under their respective authors' terms.

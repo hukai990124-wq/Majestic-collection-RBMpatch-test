@@ -20,6 +20,7 @@
 - 删除 14 条指向已不存在物品的遗留规则，涉及旧 knightly 系列、gold_maxmilian 系列，以及两件改名前后的旧编号。当前已无孤儿规则。
 - 覆盖主模组 50 件装备、14 把组合武器和 39 个锻造部件；共 82 个防护字段和 23 个伤害系数，无遗漏项、无部分覆盖项。
 - 103 个物品和部件名称中有 102 个继承主模组的中文翻译；长矛兵胸甲的中文名尚未补入主模组语言文件。双头龙剑仍仅可双手使用。
+- 本补丁自本版本起以 **MIT 协议**开源发布，详见 [LICENSE](LICENSE)。
 
 所有新增数值、参考部件和取值依据见 [BALANCE_UPDATES.md](BALANCE_UPDATES.md)。新增数值是兼容性平衡目标，不代表已在战斗中验证。
 
@@ -47,6 +48,12 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 
 本次固定使用提交 7f9069b6e111c7ce124f07545f0edef8202042bf，其 SubModule.xml 标注 RBM v4.5.4 / Bannerlord v1.4.8。正式使用时仍需核对所安装的游戏和 RBM 版本。
 
+## 许可
+
+本补丁以 **MIT 协议**发布，全文见 [LICENSE](LICENSE)。你可以自由使用、修改、再分发，包括商业用途，只需保留版权声明。
+
+本补丁不包含 RBM 或 MajesticCollection 的任何文件，仅在加载时转换它们提供的数据。RBM 与 MajesticCollection 各自遵循其原作者的授权条款。
+
 </details>
 
 <details>
@@ -67,6 +74,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
 - Covers the base mod's 50 equipment items, 14 crafted weapons, and 39 crafting pieces; 82 protection fields and 23 damage factors, with no gaps and no partial coverage.
 - 102 of 103 item and piece names inherit the base mod's Chinese translations; the pikeman cuirass has no Chinese string in the base module yet. The gilded dragon sword remains two-handed only.
+- Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.
 
@@ -94,6 +102,12 @@ Official RBM source: [Fellow93/RealisticBattleProject](https://github.com/Fellow
 
 This update uses the fixed reference commit 7f9069b6e111c7ce124f07545f0edef8202042bf. Its SubModule.xml specifies RBM v4.5.4 / Bannerlord v1.4.8. Check your installed game and RBM versions before use.
 
+## License
+
+Released under the **MIT License**; see [LICENSE](LICENSE) for the full text. You may use, modify, and redistribute this patch freely, including commercially, as long as the copyright notice is retained.
+
+This patch contains no files from RBM or MajesticCollection. It only transforms the data they provide at load time. RBM and MajesticCollection remain under their respective authors' terms.
+
 </details>
 
 <details>
@@ -114,6 +128,7 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 - 本体 MOD から削除されたアイテムを対象としていた旧ルール 14 件（旧 knightly シリーズ、gold_maxmilian シリーズ、改名前の旧 ID 2 件）を削除しました。孤立したルールは残っていません。
 - 本体 MOD の装備 50 点、組み立て式武器 14 点、鍛冶パーツ 39 点を対象とし、防御値 82 項目・ダメージ係数 23 項目に対応しています。未対応・部分対応はありません。
 - 名称 103 件のうち 102 件は本体 MOD の中国語翻訳を継承しています。長槍兵胸甲の中国語名は本体 MOD の言語ファイルに未登録です。金装の双頭竜剣は両手専用のままです。
+- 本バージョンより、本パッチは **MIT ライセンス** で公開されます。詳細は [LICENSE](LICENSE) を参照してください。
 
 追加した数値、参照アイテム、設定理由は [BALANCE_UPDATES.md](BALANCE_UPDATES.md) を参照してください。これらの数値は互換性のためのバランス調整目標であり、実戦で検証済みの値ではありません。
 
@@ -140,5 +155,11 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 RBM 公式ソース：[Fellow93/RealisticBattleProject](https://github.com/Fellow93/RealisticBattleProject/tree/7f9069b6e111c7ce124f07545f0edef8202042bf/RBMXML)。
 
 今回の参照元はコミット 7f9069b6e111c7ce124f07545f0edef8202042bf に固定しています。その SubModule.xml には RBM v4.5.4 / Bannerlord v1.4.8 と記載されています。使用前に、インストール済みのゲームと RBM のバージョンを確認してください。
+
+## ライセンス
+
+本パッチは **MIT ライセンス** で公開されています。全文は [LICENSE](LICENSE) を参照してください。著作権表示を保持する限り、商用を含めて自由に使用・改変・再配布できます。
+
+本パッチには RBM および MajesticCollection のファイルは含まれていません。ロード時にそれらが提供するデータを変換するのみです。RBM と MajesticCollection は、それぞれの作者の条件に従います。
 
 </details>
