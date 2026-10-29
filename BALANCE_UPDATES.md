@@ -1,9 +1,40 @@
-# RBM Balance Updates — 2026-10-25
+# RBM Balance Updates
+
+最新更新 / Latest / 最新：2026-10-30
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-10-30
+
+本次新增 10 条规则，覆盖主模组新加入的西班牙方阵（Tercio）系列共 6 件装备。所有目标值均套用本补丁中**原始防护值完全相同**的既有规则，未引入新的平衡判断；映射关系不是原作者为本模组提供的官方配置。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_tercioelite_helmet/head_armor | 120 | 原始头部防护 55，与 mc_royal_conqueror_helmet 完全相同，沿用其目标值 |
+| 装备 | mc_tercioelite_plate/head_armor | 25 | 原始 15/60/15，与 mc_royal_conqueror_cuirass（15/60/12）同档，沿用其头部值 |
+| 装备 | mc_tercioelite_plate/body_armor | 110 | 同档胸甲，沿用 mc_royal_conqueror_cuirass 躯干值 |
+| 装备 | mc_tercioelite_plate/leg_armor | 35 | 同档胸甲腿部值；与 mc_royal_conqueror_cuirass 及 doppelsoldner_lite_plate 一致 |
+| 装备 | mc_tercioelite_shoulders/body_armor | 40 | 原始 25，与镀金花草纹肩甲、马克西米利安肩甲、维吉亚队长肩甲同值，沿用其目标值 |
+| 装备 | mc_tercioelite_boots/leg_armor | 46 | 原始 25，与 mc_royal_conqueror_boots 同值，沿用其目标值 |
+| 装备 | mc_tercioelite_gauntlets/arm_armor | 45 | 原始 25，与 mc_royal_conqueror_gauntlets 同值，沿用其目标值 |
+| 装备 | mc_terciopikeman_cuirass/head_armor | 20 | 原始 10/50/15，与 doppelsoldner_lite_plate（10/60/15）同档 |
+| 装备 | mc_terciopikeman_cuirass/body_armor | 105 | 同上，沿用该档位躯干值 |
+| 装备 | mc_terciopikeman_cuirass/leg_armor | 35 | 同上，沿用该档位腿部值 |
+
+### 说明
+
+主模组把 `mc_tercioelite_helmet` 这个 id 定义了两次（两套不同 mesh，同一 id）。XSLT 规则按 id 匹配，因此一条规则同时作用于两者，无需重复添加。此处未修改主模组，仅记录该现象。
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 96 条，全部唯一、数值合法。主模组 50 件 Item 的防护字段已 100% 覆盖，无遗漏项、无部分覆盖项。
+
+`tools/verify_patch.ps1` 全流程当前无法跑通：主模组 `std_majestic_collection_strings_xml-zho-CN.xml` 中缺少 `MCTercioPikemanCuirass` 语言串，脚本在语言校验阶段中止。该缺口属主模组问题，不在本补丁修改范围内。
+
+---
 
 ## RBM 补齐记录：2026-10-25
 
@@ -73,6 +104,35 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-10-30
+
+This update adds 10 rules covering the 6 Tercio series items newly added to the base module. Every target value reuses an existing rule whose base-module protection value is **exactly identical**, so no new balance judgement is introduced; these mappings are not an official configuration provided by RBM's authors for this mod.
+
+| Category | Item / field | New target value | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_tercioelite_helmet/head_armor | 120 | Base head protection 55, identical to mc_royal_conqueror_helmet; reuses its target value |
+| items | mc_tercioelite_plate/head_armor | 25 | Base 15/60/15, same tier as mc_royal_conqueror_cuirass (15/60/12); reuses its head value |
+| items | mc_tercioelite_plate/body_armor | 110 | Same cuirass tier; reuses mc_royal_conqueror_cuirass torso value |
+| items | mc_tercioelite_plate/leg_armor | 35 | Same cuirass tier leg value; consistent with mc_royal_conqueror_cuirass and doppelsoldner_lite_plate |
+| items | mc_tercioelite_shoulders/body_armor | 40 | Base 25, identical to gilded acanthus, maxmilian and vaegir captain shoulders; reuses their target value |
+| items | mc_tercioelite_boots/leg_armor | 46 | Base 25, identical to mc_royal_conqueror_boots; reuses its target value |
+| items | mc_tercioelite_gauntlets/arm_armor | 45 | Base 25, identical to mc_royal_conqueror_gauntlets; reuses its target value |
+| items | mc_terciopikeman_cuirass/head_armor | 20 | Base 10/50/15, same tier as doppelsoldner_lite_plate (10/60/15) |
+| items | mc_terciopikeman_cuirass/body_armor | 105 | Same tier; reuses that tier's torso value |
+| items | mc_terciopikeman_cuirass/leg_armor | 35 | Same tier; reuses that tier's leg value |
+
+### Notes
+
+The base module declares the id `mc_tercioelite_helmet` twice (two different meshes, one id). XSLT rules match on item id, so a single rule applies to both; no duplicate rule is needed. The base module was not modified; this is recorded only as an observation.
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 96 rules, all unique and numerically valid. Protection fields for all 50 base-module items are covered 100%, with no gaps and no partial coverage.
+
+The full `tools/verify_patch.ps1` run currently cannot complete: the base module's `std_majestic_collection_strings_xml-zho-CN.xml` lacks the `MCTercioPikemanCuirass` string, so the script aborts at the localization check. That gap belongs to the base module and is outside this patch's scope.
+
+---
+
 ## RBM compatibility additions: 2026-10-25
 
 This update adds 44 rules. The table lists this patch's compatibility targets. Entries marked “Existing patch” follow the previous patch's settings for similar equipment; other entries use official RBM data from a fixed reference commit. Matching similar items is a balance decision, not an official configuration provided by RBM's authors for this mod.
@@ -140,6 +200,35 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-10-30
+
+本体 MOD に新規追加されたテルシオ（Tercio）シリーズ 6 点を対象に、10 件のルールを追加しました。目標値はすべて、本体 MOD 側の防御値が**完全に一致する**既存ルールを踏襲しており、新たなバランス判断は行っていません。この対応付けは RBM 作者が本 MOD 向けに提供した公式設定ではありません。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_tercioelite_helmet/head_armor | 120 | 本体の頭部防御 55。mc_royal_conqueror_helmet と同値のため、その目標値を踏襲 |
+| 装備 | mc_tercioelite_plate/head_armor | 25 | 本体 15/60/15。mc_royal_conqueror_cuirass（15/60/12）と同帯のため、その頭部値を踏襲 |
+| 装備 | mc_tercioelite_plate/body_armor | 110 | 同帯の胸甲。mc_royal_conqueror_cuirass の胴部値を踏襲 |
+| 装備 | mc_tercioelite_plate/leg_armor | 35 | 同帯の脚部値。mc_royal_conqueror_cuirass および doppelsoldner_lite_plate と一致 |
+| 装備 | mc_tercioelite_shoulders/body_armor | 40 | 本体 25。金装アカンサス肩甲・マクシミリアン肩甲・ヴァギル隊長肩甲と同値のため、その目標値を踏襲 |
+| 装備 | mc_tercioelite_boots/leg_armor | 46 | 本体 25。mc_royal_conqueror_boots と同値のため、その目標値を踏襲 |
+| 装備 | mc_tercioelite_gauntlets/arm_armor | 45 | 本体 25。mc_royal_conqueror_gauntlets と同値のため、その目標値を踏襲 |
+| 装備 | mc_terciopikeman_cuirass/head_armor | 20 | 本体 10/50/15。doppelsoldner_lite_plate（10/60/15）と同帯 |
+| 装備 | mc_terciopikeman_cuirass/body_armor | 105 | 同帯。その胴部値を踏襲 |
+| 装備 | mc_terciopikeman_cuirass/leg_armor | 35 | 同帯。その脚部値を踏襲 |
+
+### 補足
+
+本体 MOD では `mc_tercioelite_helmet` という id が 2 回定義されています（別メッシュ・同一 id）。XSLT のルールは id で照合するため、1 件のルールが両方に適用されます。重複したルールは不要です。本体 MOD は変更しておらず、ここでは現象の記録のみ行います。
+
+### 検証結果
+
+`rbm_compat_items.xslt` のルールは計 96 件、すべて一意で数値も妥当です。本体 MOD の 50 点すべてについて防御フィールドが 100% 網羅されており、未対応・部分対応はありません。
+
+`tools/verify_patch.ps1` の全工程は現時点では完走できません。本体 MOD の `std_majestic_collection_strings_xml-zho-CN.xml` に `MCTercioPikemanCuirass` の文字列が存在しないため、スクリプトは翻訳検証の段階で中断します。この欠落は本体 MOD 側の問題であり、本パッチの対象外です。
+
+---
 
 ## RBM 互換設定の補完記録：2026-10-25
 

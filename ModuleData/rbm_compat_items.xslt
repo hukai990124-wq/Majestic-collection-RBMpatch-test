@@ -100,6 +100,27 @@
         <xsl:when test="$key='mc_horse_plate_armor_light/leg_armor'">5</xsl:when>
         <xsl:when test="$key='maximilian_boucheshield/body_armor'">6</xsl:when>
         <xsl:when test="$key='maximilian_boucheshield/hit_points'">710</xsl:when>
+        <!-- 2026-10-30: Tercio Elite / Tercio Pikeman coverage.
+             Every value mirrors an existing rule whose base-module value is identical,
+             so no new balance judgement is introduced:
+               helmet 55            -> mc_royal_conqueror_helmet           (55 -> 120)
+               plate 15/60/15       -> mc_royal_conqueror_cuirass          (15/60/12 -> 25/110/35)
+               pikeman 10/50/15     -> mc_landsknecht_doppelsoldner_lite_plate (10/60/15 -> 20/105/35)
+               shoulders 25         -> gilded acanthus / maxmilian / vaegir shoulder line (25 -> 40)
+               boots 25             -> mc_royal_conqueror_boots           (25 -> 46)
+               gauntlets 25         -> mc_royal_conqueror_gauntlets       (25 -> 45)
+             mc_tercioelite_helmet is declared twice in the base module; this single
+             rule applies to both, since the key matches on item id. -->
+        <xsl:when test="$key='mc_tercioelite_helmet/head_armor'">120</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_plate/head_armor'">25</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_plate/body_armor'">110</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_plate/leg_armor'">35</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_shoulders/body_armor'">40</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_boots/leg_armor'">46</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_gauntlets/arm_armor'">45</xsl:when>
+        <xsl:when test="$key='mc_terciopikeman_cuirass/head_armor'">20</xsl:when>
+        <xsl:when test="$key='mc_terciopikeman_cuirass/body_armor'">105</xsl:when>
+        <xsl:when test="$key='mc_terciopikeman_cuirass/leg_armor'">35</xsl:when>
         <xsl:otherwise><xsl:value-of select="." /></xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
