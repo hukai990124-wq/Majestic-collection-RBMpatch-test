@@ -9,6 +9,26 @@
 
 ## RBM 补齐记录：2026-10-30
 
+### 词条清理
+
+删除 14 条指向**不存在物品**的遗留规则。以下 9 个 id 已在本模组及全部 Modules 目录中检索，确认无任何定义或引用：
+
+| 遗留 id | 删除的字段 | 处理说明 |
+| --- | --- | --- |
+| mc_knightly_battle_gauntlets | arm_armor | 删除；主模组无此物品，也无可对应的替代 id |
+| mc_knightly_battle_boots | leg_armor | 同上 |
+| mc_knightly_battle_helmet | head_armor | 同上 |
+| mc_knightly_shoulders | head_armor、body_armor | 同上 |
+| mc_knightly_plate | head_armor、body_armor、leg_armor | 同上 |
+| mc_gold_maxmilian_armor | head_armor、body_armor、leg_armor | 同上 |
+| mc_gold_maxmilian_shoulder | body_armor | 同上 |
+| mc_landsknecht_helmet | head_armor | 删除；现役 id 为 mc_landsknecht_doppelsoldner_helmet，其规则已存在且同为 120 |
+| mc_landsknecht_shoes | leg_armor | 删除；现役 id 为 mc_landsknecht_schuhe，其规则已存在（22） |
+
+规则总数由 96 条降至 82 条。历史章节中出现的「沿用旧补丁 knightly_plate 档位」等表述，指的是数值档位的历史来源，对应规则本身已移除。
+
+### Tercio 系列补齐
+
 本次新增 10 条规则，覆盖主模组新加入的西班牙方阵（Tercio）系列共 6 件装备。所有目标值均套用本补丁中**原始防护值完全相同**的既有规则，未引入新的平衡判断；映射关系不是原作者为本模组提供的官方配置。
 
 | 类别 | 物品/字段 | 新目标值 | 参考与依据 |
@@ -30,7 +50,7 @@
 
 ### 校验结果
 
-`rbm_compat_items.xslt` 规则共 96 条，全部唯一、数值合法。主模组 50 件 Item 的防护字段已 100% 覆盖，无遗漏项、无部分覆盖项。
+`rbm_compat_items.xslt` 规则共 82 条，全部唯一、数值合法。主模组 50 件 Item 的防护字段已 100% 覆盖，无遗漏项、无部分覆盖项；补丁内已无指向不存在物品的孤儿规则。
 
 `tools/verify_patch.ps1` 全流程当前无法跑通：主模组 `std_majestic_collection_strings_xml-zho-CN.xml` 中缺少 `MCTercioPikemanCuirass` 语言串，脚本在语言校验阶段中止。该缺口属主模组问题，不在本补丁修改范围内。
 
@@ -106,6 +126,26 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 
 ## RBM compatibility additions: 2026-10-30
 
+### Rule cleanup
+
+Removed 14 legacy rules that targeted **items which no longer exist**. All nine ids below were searched across this module and every other Modules directory and found to have no definition or reference anywhere:
+
+| Legacy id | Removed fields | Disposition |
+| --- | --- | --- |
+| mc_knightly_battle_gauntlets | arm_armor | Removed; no such item in the base module, no replacement id |
+| mc_knightly_battle_boots | leg_armor | Same |
+| mc_knightly_battle_helmet | head_armor | Same |
+| mc_knightly_shoulders | head_armor, body_armor | Same |
+| mc_knightly_plate | head_armor, body_armor, leg_armor | Same |
+| mc_gold_maxmilian_armor | head_armor, body_armor, leg_armor | Same |
+| mc_gold_maxmilian_shoulder | body_armor | Same |
+| mc_landsknecht_helmet | head_armor | Removed; the live id is mc_landsknecht_doppelsoldner_helmet, whose rule already exists at the same value 120 |
+| mc_landsknecht_shoes | leg_armor | Removed; the live id is mc_landsknecht_schuhe, whose rule already exists (22) |
+
+Total rule count drops from 96 to 82. References to "knightly_plate profile" in earlier sections describe the historical source of a value tier; the rules themselves are gone.
+
+### Tercio series additions
+
 This update adds 10 rules covering the 6 Tercio series items newly added to the base module. Every target value reuses an existing rule whose base-module protection value is **exactly identical**, so no new balance judgement is introduced; these mappings are not an official configuration provided by RBM's authors for this mod.
 
 | Category | Item / field | New target value | Reference and rationale |
@@ -127,7 +167,7 @@ The base module declares the id `mc_tercioelite_helmet` twice (two different mes
 
 ### Verification results
 
-`rbm_compat_items.xslt` now holds 96 rules, all unique and numerically valid. Protection fields for all 50 base-module items are covered 100%, with no gaps and no partial coverage.
+`rbm_compat_items.xslt` now holds 82 rules, all unique and numerically valid. Protection fields for all 50 base-module items are covered 100%, with no gaps and no partial coverage; the patch no longer contains any rule pointing at a non-existent item.
 
 The full `tools/verify_patch.ps1` run currently cannot complete: the base module's `std_majestic_collection_strings_xml-zho-CN.xml` lacks the `MCTercioPikemanCuirass` string, so the script aborts at the localization check. That gap belongs to the base module and is outside this patch's scope.
 
@@ -203,6 +243,26 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ## RBM 互換設定の補完記録：2026-10-30
 
+### ルール整理
+
+**存在しないアイテム**を対象としていた 14 件の旧ルールを削除しました。以下の 9 個の id は本 MOD および全 Modules ディレクトリを検索し、定義も参照も存在しないことを確認済みです。
+
+| 旧 id | 削除した項目 | 対応 |
+| --- | --- | --- |
+| mc_knightly_battle_gauntlets | arm_armor | 削除。本体 MOD に該当アイテムなし、代替 id もなし |
+| mc_knightly_battle_boots | leg_armor | 同上 |
+| mc_knightly_battle_helmet | head_armor | 同上 |
+| mc_knightly_shoulders | head_armor、body_armor | 同上 |
+| mc_knightly_plate | head_armor、body_armor、leg_armor | 同上 |
+| mc_gold_maxmilian_armor | head_armor、body_armor、leg_armor | 同上 |
+| mc_gold_maxmilian_shoulder | body_armor | 同上 |
+| mc_landsknecht_helmet | head_armor | 削除。現行 id は mc_landsknecht_doppelsoldner_helmet で、同値 120 のルールが既に存在 |
+| mc_landsknecht_shoes | leg_armor | 削除。現行 id は mc_landsknecht_schuhe で、ルール（22）が既に存在 |
+
+ルール総数は 96 件から 82 件に減少しました。過去の章にある「従来の knightly_plate の防御設定」という記述は数値帯の由来を示すものであり、該当ルール自体は削除済みです。
+
+### テルシオシリーズの補完
+
 本体 MOD に新規追加されたテルシオ（Tercio）シリーズ 6 点を対象に、10 件のルールを追加しました。目標値はすべて、本体 MOD 側の防御値が**完全に一致する**既存ルールを踏襲しており、新たなバランス判断は行っていません。この対応付けは RBM 作者が本 MOD 向けに提供した公式設定ではありません。
 
 | 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
@@ -224,7 +284,7 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ### 検証結果
 
-`rbm_compat_items.xslt` のルールは計 96 件、すべて一意で数値も妥当です。本体 MOD の 50 点すべてについて防御フィールドが 100% 網羅されており、未対応・部分対応はありません。
+`rbm_compat_items.xslt` のルールは計 82 件、すべて一意で数値も妥当です。本体 MOD の 50 点すべてについて防御フィールドが 100% 網羅されており、未対応・部分対応はありません。存在しないアイテムを指すルールは残っていません。
 
 `tools/verify_patch.ps1` の全工程は現時点では完走できません。本体 MOD の `std_majestic_collection_strings_xml-zho-CN.xml` に `MCTercioPikemanCuirass` の文字列が存在しないため、スクリプトは翻訳検証の段階で中断します。この欠落は本体 MOD 側の問題であり、本パッチの対象外です。
 

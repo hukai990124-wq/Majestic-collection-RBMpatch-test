@@ -26,14 +26,6 @@
         <xsl:when test="$key='mc_gilded_acanthus_leg_armour/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_shoulder_armour/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_helmet/head_armor'">130</xsl:when>
-        <xsl:when test="$key='mc_knightly_battle_gauntlets/arm_armor'">45</xsl:when>
-        <xsl:when test="$key='mc_knightly_battle_boots/leg_armor'">45</xsl:when>
-        <xsl:when test="$key='mc_knightly_battle_helmet/head_armor'">115</xsl:when>
-        <xsl:when test="$key='mc_knightly_shoulders/head_armor'">15</xsl:when>
-        <xsl:when test="$key='mc_knightly_shoulders/body_armor'">30</xsl:when>
-        <xsl:when test="$key='mc_knightly_plate/head_armor'">20</xsl:when>
-        <xsl:when test="$key='mc_knightly_plate/body_armor'">105</xsl:when>
-        <xsl:when test="$key='mc_knightly_plate/leg_armor'">35</xsl:when>
         <xsl:when test="$key='mc_vaegir_guard_commander_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_shoulder/body_armor'">40</xsl:when>
@@ -42,9 +34,7 @@
         <xsl:when test="$key='mc_vaegir_commander_armor/arm_armor'">50</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_hand_armor/arm_armor'">45</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_boots/leg_armor'">50</xsl:when>
-        <xsl:when test="$key='mc_landsknecht_helmet/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_fleece/body_armor'">1</xsl:when>
-        <xsl:when test="$key='mc_landsknecht_shoes/leg_armor'">20</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/head_armor'">30</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/body_armor'">120</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/leg_armor'">45</xsl:when>
@@ -55,10 +45,6 @@
         <xsl:when test="$key='mc_maximilian_heavy_helmet/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_sol_boots/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_sol_helmet/head_armor'">130</xsl:when>
-        <xsl:when test="$key='mc_gold_maxmilian_armor/head_armor'">30</xsl:when>
-        <xsl:when test="$key='mc_gold_maxmilian_armor/body_armor'">120</xsl:when>
-        <xsl:when test="$key='mc_gold_maxmilian_armor/leg_armor'">45</xsl:when>
-        <xsl:when test="$key='mc_gold_maxmilian_shoulder/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_shield/body_armor'">15</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_shield/hit_points'">2000</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_shield/body_armor'">18</xsl:when>
