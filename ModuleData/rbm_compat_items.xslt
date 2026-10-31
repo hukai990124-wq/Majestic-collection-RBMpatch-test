@@ -98,6 +98,17 @@
              mc_tercioelite_helmet is declared twice in the base module; this single
              rule applies to both, since the key matches on item id. -->
         <xsl:when test="$key='mc_tercioelite_helmet/head_armor'">120</xsl:when>
+        <!-- 2026-10-31: the second Tercio helmet was split out of the duplicated
+             mc_tercioelite_helmet id into mc_tercioelite_helmet_b. Same base value
+             (55) and same mesh tier, so it takes the same target.
+             mc_terciopikeman_shoes is a CLOTH shoe in the artwork; the base module
+             mislabels it as material_type="Plate" (asset authoring slip). Its base
+             value 25 matches mc_doppelsoldner_shoes, which is also footwear with a
+             base value of 25, so it follows that tier (25 -> 20) rather than the
+             plate boot tier. If the base module is later corrected to Cloth, this
+             rule still holds; only the material attribute would change. -->
+        <xsl:when test="$key='mc_tercioelite_helmet_b/head_armor'">120</xsl:when>
+        <xsl:when test="$key='mc_terciopikeman_shoes/leg_armor'">20</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/head_armor'">25</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/body_armor'">110</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/leg_armor'">35</xsl:when>

@@ -1,11 +1,34 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-10-30
+最新更新 / Latest / 最新：2026-10-31
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-10-31
+
+本次新增 2 条规则，对应主模组的两处变动：拆分重复 id 后的第二顶西班牙方阵头盔，以及新增的长矛兵战靴。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_tercioelite_helmet_b/head_armor | 120 | 主模组把原先重复的 mc_tercioelite_helmet 拆为两个 id；原始头部防护同为 55，沿用同档目标值 |
+| 装备 | mc_terciopikeman_shoes/leg_armor | 20 | 美术为布鞋；原始护甲值 25 与 mc_doppelsoldner_shoes 相同，沿用其鞋子档位 |
+
+### 说明
+
+`mc_tercioelite_helmet` 的重复 id 问题已在主模组修复（拆为 `mc_tercioelite_helmet` 与 `mc_tercioelite_helmet_b`）。此前一条规则同时作用于两顶头盔的情况不再存在，两者各自独立计值。
+
+`mc_terciopikeman_shoes` 在主模组中被标为 `modifier_group="plate"`、`material_type="Plate"`、`weight="3"`，但其美术为布鞋，重量也与真实布鞋不符（`mc_landsknecht_schuhe` 为 0.2，`mc_peaky_shoes` 为 0.8）。本补丁按其实际材质（布鞋）取档；主模组若修正材质与重量属性，此规则的目标值无需改动。
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 84 条，全部唯一、数值合法。主模组 52 件装备 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。
+
+主模组仍缺 3 条中文词条：`MCTercioEliteHelmetB`、`MCTercioPikemanCuirass`、`MCTercioPikemanShoes`。属主模组问题，不在本补丁修改范围内。
+
+---
 
 ## RBM 补齐记录：2026-10-30
 
@@ -124,6 +147,29 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-10-31
+
+This update adds 2 rules for two base-module changes: the second Tercio helmet after the duplicated id was split, and a newly added pikeman shoe.
+
+| Category | Item / field | New target value | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_tercioelite_helmet_b/head_armor | 120 | The base module split the previously duplicated mc_tercioelite_helmet id into two; base head protection is 55 in both, so the same target applies |
+| items | mc_terciopikeman_shoes/leg_armor | 20 | The artwork is a cloth shoe; its base value 25 matches mc_doppelsoldner_shoes, so it follows that shoe tier |
+
+### Notes
+
+The duplicate `mc_tercioelite_helmet` id has been fixed in the base module (split into `mc_tercioelite_helmet` and `mc_tercioelite_helmet_b`). The previous situation where one rule covered both helmets no longer applies; each is now valued independently.
+
+`mc_terciopikeman_shoes` is labelled `modifier_group="plate"`, `material_type="Plate"` and `weight="3"` in the base module, but its artwork is a cloth shoe and the weight does not match cloth footwear (`mc_landsknecht_schuhe` is 0.2, `mc_peaky_shoes` is 0.8). This patch follows the actual material; if the base module corrects its material and weight attributes, the target value here does not need to change.
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 84 rules, all unique and numerically valid. Protection fields for all 52 base-module items are covered 100%, with no gaps, no partial coverage and no orphan rules.
+
+The base module is still missing 3 Chinese strings: `MCTercioEliteHelmetB`, `MCTercioPikemanCuirass`, `MCTercioPikemanShoes`. That is a base-module issue outside this patch's scope.
+
+---
+
 ## RBM compatibility additions: 2026-10-30
 
 ### Rule cleanup
@@ -240,6 +286,29 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-10-31
+
+本体 MOD の 2 点の変更に対応し、2 件のルールを追加しました。重複 ID を分割した 2 つ目のテルシオ兜と、新規追加された長槍兵の靴です。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_tercioelite_helmet_b/head_armor | 120 | 本体 MOD が重複していた mc_tercioelite_helmet を 2 つに分割。元の頭部防御は双方とも 55 のため同じ目標値を適用 |
+| 装備 | mc_terciopikeman_shoes/leg_armor | 20 | 美術は布製の靴。元の値 25 が mc_doppelsoldner_shoes と同値のため、その靴の帯を踏襲 |
+
+### 補足
+
+`mc_tercioelite_helmet` の重複 ID は本体 MOD で修正済みです（`mc_tercioelite_helmet` と `mc_tercioelite_helmet_b` に分割）。1 件のルールが両方の兜に適用される状況は解消され、それぞれ独立して値を設定します。
+
+`mc_terciopikeman_shoes` は本体 MOD で `modifier_group="plate"`、`material_type="Plate"`、`weight="3"` と記載されていますが、美術は布製の靴であり、重量も実際の布靴と一致しません（`mc_landsknecht_schuhe` は 0.2、`mc_peaky_shoes` は 0.8）。本パッチは実際の材質に従って設定しています。本体 MOD 側で材質と重量が修正されても、ここの目標値を変更する必要はありません。
+
+### 検証結果
+
+`rbm_compat_items.xslt` のルールは計 84 件、すべて一意で数値も妥当です。本体 MOD の 52 点すべてについて防御フィールドが 100% 網羅されており、未対応・部分対応・孤立ルールはありません。
+
+本体 MOD には中国語の文字列が 3 件不足しています：`MCTercioEliteHelmetB`、`MCTercioPikemanCuirass`、`MCTercioPikemanShoes`。本体 MOD 側の問題であり、本パッチの対象外です。
+
+---
 
 ## RBM 互換設定の補完記録：2026-10-30
 

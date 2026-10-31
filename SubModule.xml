@@ -2,7 +2,7 @@
 <Module>
   <Name value="Majestic Collection - RBM Compatibility" />
   <Id value="MajesticCollection_RBM_Patch" />
-  <Version value="v1.3.0" />
+  <Version value="v1.3.1" />
   <ModuleCategory value="Singleplayer" />
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
