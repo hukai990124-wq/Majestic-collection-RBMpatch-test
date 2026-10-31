@@ -15,12 +15,15 @@
 | --- | --- | --- | --- |
 | 装备 | mc_tercioelite_helmet_b/head_armor | 120 | 主模组把原先重复的 mc_tercioelite_helmet 拆为两个 id；原始头部防护同为 55，沿用同档目标值 |
 | 装备 | mc_terciopikeman_shoes/leg_armor | 20 | 美术为布鞋；原始护甲值 25 与 mc_doppelsoldner_shoes 相同，沿用其鞋子档位 |
+| 装备 | mc_tercioelite_boots/leg_armor | 20 | 美术为皮靴（此前按板甲靴取了 46）；改按皮革档位，与 mc_doppelsoldner_shoes 同值 |
 
 ### 说明
 
 `mc_tercioelite_helmet` 的重复 id 问题已在主模组修复（拆为 `mc_tercioelite_helmet` 与 `mc_tercioelite_helmet_b`）。此前一条规则同时作用于两顶头盔的情况不再存在，两者各自独立计值。
 
 `mc_terciopikeman_shoes` 在主模组中被标为 `modifier_group="plate"`、`material_type="Plate"`、`weight="3"`，但其美术为布鞋，重量也与真实布鞋不符（`mc_landsknecht_schuhe` 为 0.2，`mc_peaky_shoes` 为 0.8）。本补丁按其实际材质（布鞋）取档；主模组若修正材质与重量属性，此规则的目标值无需改动。
+
+`mc_tercioelite_boots` 同样是皮革靴美术，主模组却按板甲靴标注。其防护值由 46 下调为 20，与 `mc_doppelsoldner_shoes` 一致。至此本补丁中所有皮革与布料鞋类统一落在 19~22 区间，板甲靴仍保留 46~55。
 
 ### 校验结果
 
@@ -155,6 +158,7 @@ This update adds 2 rules for two base-module changes: the second Tercio helmet a
 | --- | --- | --- | --- |
 | items | mc_tercioelite_helmet_b/head_armor | 120 | The base module split the previously duplicated mc_tercioelite_helmet id into two; base head protection is 55 in both, so the same target applies |
 | items | mc_terciopikeman_shoes/leg_armor | 20 | The artwork is a cloth shoe; its base value 25 matches mc_doppelsoldner_shoes, so it follows that shoe tier |
+| items | mc_tercioelite_boots/leg_armor | 20 | The artwork is a leather boot (previously valued as a plate boot at 46); moved to the leather tier, matching mc_doppelsoldner_shoes |
 
 ### Notes
 

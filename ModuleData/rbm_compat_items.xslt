@@ -113,7 +113,7 @@
         <xsl:when test="$key='mc_tercioelite_plate/body_armor'">110</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/leg_armor'">35</xsl:when>
         <xsl:when test="$key='mc_tercioelite_shoulders/body_armor'">40</xsl:when>
-        <xsl:when test="$key='mc_tercioelite_boots/leg_armor'">46</xsl:when>
+        <xsl:when test="$key='mc_tercioelite_boots/leg_armor'">20</xsl:when>
         <xsl:when test="$key='mc_tercioelite_gauntlets/arm_armor'">45</xsl:when>
         <xsl:when test="$key='mc_terciopikeman_cuirass/head_armor'">20</xsl:when>
         <xsl:when test="$key='mc_terciopikeman_cuirass/body_armor'">105</xsl:when>
