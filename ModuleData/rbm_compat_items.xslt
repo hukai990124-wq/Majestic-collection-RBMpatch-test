@@ -61,7 +61,7 @@
         <xsl:when test="$key='mc_peaky_gloves/arm_armor'">24</xsl:when>
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_helmet/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_landsknecht_hat/head_armor'">6</xsl:when>
-        <xsl:when test="$key='mc_doppelsoldner_shoes/leg_armor'">20</xsl:when>
+        <xsl:when test="$key='mc_doppelsoldner_shoes/leg_armor'">46</xsl:when>
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_lite_plate/head_armor'">20</xsl:when>
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_lite_plate/body_armor'">105</xsl:when>
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_lite_plate/leg_armor'">35</xsl:when>

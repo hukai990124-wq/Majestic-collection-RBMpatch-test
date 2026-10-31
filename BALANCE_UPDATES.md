@@ -9,13 +9,14 @@
 
 ## RBM 补齐记录：2026-10-31
 
-本次新增 2 条规则，对应主模组的两处变动：拆分重复 id 后的第二顶西班牙方阵头盔，以及新增的长矛兵战靴。
+本次新增 2 条规则并调整 2 条既有规则，对应主模组的三处变动：拆分重复 id 后的第二顶西班牙方阵头盔、新增的长矛兵战靴，以及两双靴子材质标注的修正。
 
 | 类别 | 物品/字段 | 新目标值 | 参考与依据 |
 | --- | --- | --- | --- |
 | 装备 | mc_tercioelite_helmet_b/head_armor | 120 | 主模组把原先重复的 mc_tercioelite_helmet 拆为两个 id；原始头部防护同为 55，沿用同档目标值 |
 | 装备 | mc_terciopikeman_shoes/leg_armor | 20 | 美术为布鞋；原始护甲值 25 与 mc_doppelsoldner_shoes 相同，沿用其鞋子档位 |
 | 装备 | mc_tercioelite_boots/leg_armor | 20 | 美术为皮靴（此前按板甲靴取了 46）；改按皮革档位，与 mc_doppelsoldner_shoes 同值 |
+| 装备 | mc_doppelsoldner_shoes/leg_armor | 46 | 主模组已改为板甲护胫外观（material_type 由 Leather 改为 Plate，重量 0.4 → 3）；原始防护值 25 与 mc_royal_conqueror_boots 相同，沿用其板甲靴档位 |
 
 ### 说明
 
@@ -23,7 +24,9 @@
 
 `mc_terciopikeman_shoes` 在主模组中被标为 `modifier_group="plate"`、`material_type="Plate"`、`weight="3"`，但其美术为布鞋，重量也与真实布鞋不符（`mc_landsknecht_schuhe` 为 0.2，`mc_peaky_shoes` 为 0.8）。本补丁按其实际材质（布鞋）取档；主模组若修正材质与重量属性，此规则的目标值无需改动。
 
-`mc_tercioelite_boots` 同样是皮革靴美术，主模组却按板甲靴标注。其防护值由 46 下调为 20，与 `mc_doppelsoldner_shoes` 一致。至此本补丁中所有皮革与布料鞋类统一落在 19~22 区间，板甲靴仍保留 46~55。
+`mc_tercioelite_boots` 同样是皮革靴美术，主模组却按板甲靴标注。其防护值由 46 下调为 20，与皮革档一致。
+
+`mc_doppelsoldner_shoes` 在主模组中已改为板甲护胫外观（`material_type` 由 Leather 改为 Plate，重量由 0.4 提至 3），本补丁相应把它从皮革档 20 上调为板甲档 46。至此鞋类分档为：皮革与布料 19~22（peaky / terciopikeman / tercioelite / landsknecht），板甲 46~55（royal_conqueror / doppelsoldner / vaegir_captain / maximilian_heavy / sol）。
 
 ### 校验结果
 
@@ -152,13 +155,14 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 
 ## RBM compatibility additions: 2026-10-31
 
-This update adds 2 rules for two base-module changes: the second Tercio helmet after the duplicated id was split, and a newly added pikeman shoe.
+This update adds 2 rules and adjusts 2 existing ones, following three base-module changes: the second Tercio helmet after the duplicated id was split, a newly added pikeman shoe, and corrected material labels on two pairs of boots.
 
 | Category | Item / field | New target value | Reference and rationale |
 | --- | --- | --- | --- |
 | items | mc_tercioelite_helmet_b/head_armor | 120 | The base module split the previously duplicated mc_tercioelite_helmet id into two; base head protection is 55 in both, so the same target applies |
 | items | mc_terciopikeman_shoes/leg_armor | 20 | The artwork is a cloth shoe; its base value 25 matches mc_doppelsoldner_shoes, so it follows that shoe tier |
-| items | mc_tercioelite_boots/leg_armor | 20 | The artwork is a leather boot (previously valued as a plate boot at 46); moved to the leather tier, matching mc_doppelsoldner_shoes |
+| items | mc_tercioelite_boots/leg_armor | 20 | The artwork is a leather boot (previously valued as a plate boot at 46); moved to the leather tier |
+| items | mc_doppelsoldner_shoes/leg_armor | 46 | The base module now uses plate greaves (material_type Leather -> Plate, weight 0.4 -> 3); base value 25 matches mc_royal_conqueror_boots, so it follows that plate boot tier |
 
 ### Notes
 
@@ -293,18 +297,24 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ## RBM 互換設定の補完記録：2026-10-31
 
-本体 MOD の 2 点の変更に対応し、2 件のルールを追加しました。重複 ID を分割した 2 つ目のテルシオ兜と、新規追加された長槍兵の靴です。
+本体 MOD の 3 点の変更に対応し、2 件のルールを追加、2 件の既存ルールを調整しました。重複 ID を分割した 2 つ目のテルシオ兜、新規追加された長槍兵の靴、そして 2 組のブーツの材質表記の修正です。
 
 | 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
 | --- | --- | --- | --- |
 | 装備 | mc_tercioelite_helmet_b/head_armor | 120 | 本体 MOD が重複していた mc_tercioelite_helmet を 2 つに分割。元の頭部防御は双方とも 55 のため同じ目標値を適用 |
 | 装備 | mc_terciopikeman_shoes/leg_armor | 20 | 美術は布製の靴。元の値 25 が mc_doppelsoldner_shoes と同値のため、その靴の帯を踏襲 |
+| 装備 | mc_tercioelite_boots/leg_armor | 20 | 美術は革製のブーツ（以前は板甲ブーツとして 46 を設定）。革の帯に変更 |
+| 装備 | mc_doppelsoldner_shoes/leg_armor | 46 | 本体 MOD が板甲のすね当て外観に変更（material_type を Leather から Plate、重量を 0.4 から 3 へ）。元の値 25 が mc_royal_conqueror_boots と同値のため、その板甲ブーツ帯を踏襲 |
 
 ### 補足
 
 `mc_tercioelite_helmet` の重複 ID は本体 MOD で修正済みです（`mc_tercioelite_helmet` と `mc_tercioelite_helmet_b` に分割）。1 件のルールが両方の兜に適用される状況は解消され、それぞれ独立して値を設定します。
 
-`mc_terciopikeman_shoes` は本体 MOD で `modifier_group="plate"`、`material_type="Plate"`、`weight="3"` と記載されていますが、美術は布製の靴であり、重量も実際の布靴と一致しません（`mc_landsknecht_schuhe` は 0.2、`mc_peaky_shoes` は 0.8）。本パッチは実際の材質に従って設定しています。本体 MOD 側で材質と重量が修正されても、ここの目標値を変更する必要はありません。
+`mc_terciopikeman_shoes` は本体 MOD で `modifier_group="plate"`、`material_type="Plate"`、`weight="3"` と記載されていますが、美術は布製の靴であり、重量も実際の布靴と一致しません（`mc_landsknecht_schuhe` は 0.2、`mc_peaky_shoes` は 0.4）。本パッチは実際の材質に従って設定しています。本体 MOD 側で材質と重量が修正されても、ここの目標値を変更する必要はありません。
+
+`mc_tercioelite_boots` も同様に革製ブーツの美術でありながら、本体 MOD では板甲ブーツとして記載されています。防御値を 46 から 20 へ変更しました。
+
+`mc_doppelsoldner_shoes` は本体 MOD で板甲のすね当て外観に変更されました（`material_type` を Leather から Plate、重量を 0.4 から 3 へ）。これに伴い、本パッチでも革の帯 20 から板甲の帯 46 へ引き上げました。現在の靴の区分は、革・布が 19~22（peaky / terciopikeman / tercioelite / landsknecht）、板甲が 46~55（royal_conqueror / doppelsoldner / vaegir_captain / maximilian_heavy / sol）です。
 
 ### 検証結果
 
