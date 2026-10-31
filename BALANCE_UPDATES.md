@@ -17,6 +17,7 @@
 | 装备 | mc_terciopikeman_shoes/leg_armor | 20 | 美术为布鞋；原始护甲值 25 与 mc_doppelsoldner_shoes 相同，沿用其鞋子档位 |
 | 装备 | mc_tercioelite_boots/leg_armor | 20 | 美术为皮靴（此前按板甲靴取了 46）；改按皮革档位，与 mc_doppelsoldner_shoes 同值 |
 | 装备 | mc_doppelsoldner_shoes/leg_armor | 46 | 主模组已改为板甲护胫外观（material_type 由 Leather 改为 Plate，重量 0.4 → 3）；原始防护值 25 与 mc_royal_conqueror_boots 相同，沿用其板甲靴档位 |
+| 装备 | mc_royal_conqueror_fleece/body_armor | 25 | 此前按纯装饰件给 1；现按主模组原始防护值 25 取值，与其他肩甲的防护值一致 |
 
 ### 说明
 
@@ -27,6 +28,10 @@
 `mc_tercioelite_boots` 同样是皮革靴美术，主模组却按板甲靴标注。其防护值由 46 下调为 20，与皮革档一致。
 
 `mc_doppelsoldner_shoes` 在主模组中已改为板甲护胫外观（`material_type` 由 Leather 改为 Plate，重量由 0.4 提至 3），本补丁相应把它从皮革档 20 上调为板甲档 46。至此鞋类分档为：皮革与布料 19~22（peaky / terciopikeman / tercioelite / landsknecht），板甲 46~55（royal_conqueror / doppelsoldner / vaegir_captain / maximilian_heavy / sol）。
+
+`mc_royal_conqueror_fleece` 此前按纯装饰件处理（RBM 给 1）。现改按主模组原始防护值 25 生效，与其他肩甲一致。其材质与重量仍沿用主模组设定。
+
+`mc_landsknecht_cuirass` 在主模组中已由布料改为板甲（`modifier_group` cloth → plate，`material_type` Cloth → Plate，重量 1.0 → 20）。本补丁原有的 105 档位本就按板甲胸甲设定，因此目标值不变，此前「按板甲档位暂定、原材质不变」的过渡状态已结束。
 
 ### 校验结果
 
@@ -163,6 +168,7 @@ This update adds 2 rules and adjusts 2 existing ones, following three base-modul
 | items | mc_terciopikeman_shoes/leg_armor | 20 | The artwork is a cloth shoe; its base value 25 matches mc_doppelsoldner_shoes, so it follows that shoe tier |
 | items | mc_tercioelite_boots/leg_armor | 20 | The artwork is a leather boot (previously valued as a plate boot at 46); moved to the leather tier |
 | items | mc_doppelsoldner_shoes/leg_armor | 46 | The base module now uses plate greaves (material_type Leather -> Plate, weight 0.4 -> 3); base value 25 matches mc_royal_conqueror_boots, so it follows that plate boot tier |
+| items | mc_royal_conqueror_fleece/body_armor | 25 | Previously treated as a pure cosmetic piece at 1; now uses the base value of 25, matching the other shoulder pieces |
 
 ### Notes
 
@@ -305,6 +311,7 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 | 装備 | mc_terciopikeman_shoes/leg_armor | 20 | 美術は布製の靴。元の値 25 が mc_doppelsoldner_shoes と同値のため、その靴の帯を踏襲 |
 | 装備 | mc_tercioelite_boots/leg_armor | 20 | 美術は革製のブーツ（以前は板甲ブーツとして 46 を設定）。革の帯に変更 |
 | 装備 | mc_doppelsoldner_shoes/leg_armor | 46 | 本体 MOD が板甲のすね当て外観に変更（material_type を Leather から Plate、重量を 0.4 から 3 へ）。元の値 25 が mc_royal_conqueror_boots と同値のため、その板甲ブーツ帯を踏襲 |
+| 装備 | mc_royal_conqueror_fleece/body_armor | 25 | 以前は純粋な装飾品として 1 を設定。今回、本体 MOD の元の防御値 25 を適用し、他の肩甲と揃えました |
 
 ### 補足
 
@@ -315,6 +322,10 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 `mc_tercioelite_boots` も同様に革製ブーツの美術でありながら、本体 MOD では板甲ブーツとして記載されています。防御値を 46 から 20 へ変更しました。
 
 `mc_doppelsoldner_shoes` は本体 MOD で板甲のすね当て外観に変更されました（`material_type` を Leather から Plate、重量を 0.4 から 3 へ）。これに伴い、本パッチでも革の帯 20 から板甲の帯 46 へ引き上げました。現在の靴の区分は、革・布が 19~22（peaky / terciopikeman / tercioelite / landsknecht）、板甲が 46~55（royal_conqueror / doppelsoldner / vaegir_captain / maximilian_heavy / sol）です。
+
+`mc_royal_conqueror_fleece` は以前、純粋な装飾品として扱っていました（RBM 値 1）。今回、本体 MOD の元の防御値 25 を適用し、他の肩甲と揃えました。材質と重量は本体 MOD の設定をそのまま使用します。
+
+`mc_landsknecht_cuirass` は本体 MOD で布製から板甲に変更されました（`modifier_group` cloth → plate、`material_type` Cloth → Plate、重量 1.0 → 20）。本パッチの 105 はもともと板甲胸甲として設定していたため、目標値は変更ありません。以前の「板甲の帯で暫定、材質は据え置き」という過渡的な状態は解消されました。
 
 ### 検証結果
 

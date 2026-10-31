@@ -34,7 +34,7 @@
         <xsl:when test="$key='mc_vaegir_commander_armor/arm_armor'">50</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_hand_armor/arm_armor'">45</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_boots/leg_armor'">50</xsl:when>
-        <xsl:when test="$key='mc_royal_conqueror_fleece/body_armor'">1</xsl:when>
+        <xsl:when test="$key='mc_royal_conqueror_fleece/body_armor'">25</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/head_armor'">30</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/body_armor'">120</xsl:when>
         <xsl:when test="$key='mc_maxmilian_armor/leg_armor'">45</xsl:when>
