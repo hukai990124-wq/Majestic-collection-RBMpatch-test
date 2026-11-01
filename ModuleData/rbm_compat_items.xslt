@@ -109,6 +109,10 @@
              rule still holds; only the material attribute would change. -->
         <xsl:when test="$key='mc_tercioelite_helmet_b/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_terciopikeman_shoes/leg_armor'">20</xsl:when>
+        <!-- 2026-11-02: Tercio Pikeman Gloves added to the base module (arm 18,
+             material_type Leather). Follows the leather glove tier, same target as
+             mc_peaky_gloves and mc_doppelsoldner_gloves. -->
+        <xsl:when test="$key='mc_terciopikeman_gloves/arm_armor'">24</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/head_armor'">25</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/body_armor'">110</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/leg_armor'">35</xsl:when>

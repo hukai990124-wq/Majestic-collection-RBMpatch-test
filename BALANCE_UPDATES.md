@@ -1,11 +1,31 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-10-31
+最新更新 / Latest / 最新：2026-11-02
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-02
+
+本次新增 1 条规则，对应主模组新增的长矛兵手套。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_terciopikeman_gloves/arm_armor | 24 | 材质为皮革，原始手臂防护 18；沿用皮革手套档位，与 mc_peaky_gloves、mc_doppelsoldner_gloves 同值 |
+
+### 说明
+
+主模组把 `mc_terciopikeman_gloves` 标为 `material_type="Leather"`，但重量写的是 1.5，与同类皮革手套（`mc_peaky_gloves` 0.3、`mc_doppelsoldner_gloves` 0.3）相差五倍，应为沿用板甲手套模板所致。本补丁按实际材质（皮革）取档；重量属主模组问题，不在本补丁范围内。
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 85 条，全部唯一、数值合法。主模组 53 件装备 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。
+
+主模组仍缺 4 条中文词条：`MCTercioEliteHelmetB`、`MCTercioPikemanCuirass`、`MCTercioPikemanGloves`、`MCTercioPikemanShoes`。属主模组问题，不在本补丁修改范围内。
+
+---
 
 ## RBM 补齐记录：2026-10-31
 
@@ -158,6 +178,26 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-02
+
+This update adds 1 rule for the pikeman gloves newly added to the base module.
+
+| Category | Item / field | New target value | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_terciopikeman_gloves/arm_armor | 24 | Leather material, base arm protection 18; follows the leather glove tier, same target as mc_peaky_gloves and mc_doppelsoldner_gloves |
+
+### Notes
+
+The base module labels `mc_terciopikeman_gloves` as `material_type="Leather"` but gives it a weight of 1.5, five times the other leather gloves (`mc_peaky_gloves` 0.3, `mc_doppelsoldner_gloves` 0.3) - most likely copied from the plate gauntlet template. This patch follows the actual material; the weight is a base-module issue outside this patch's scope.
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 85 rules, all unique and numerically valid. Protection fields for all 53 base-module items are covered 100%, with no gaps, no partial coverage and no orphan rules.
+
+The base module is still missing 4 Chinese strings: `MCTercioEliteHelmetB`, `MCTercioPikemanCuirass`, `MCTercioPikemanGloves`, `MCTercioPikemanShoes`. That is a base-module issue outside this patch's scope.
+
+---
+
 ## RBM compatibility additions: 2026-10-31
 
 This update adds 2 rules and adjusts 2 existing ones, following three base-module changes: the second Tercio helmet after the duplicated id was split, a newly added pikeman shoe, and corrected material labels on two pairs of boots.
@@ -300,6 +340,26 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-02
+
+本体 MOD に新規追加された長槍兵の籠手に対応し、1 件のルールを追加しました。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_terciopikeman_gloves/arm_armor | 24 | 材質は革、元の腕部防御は 18。革製籠手の帯を踏襲し、mc_peaky_gloves および mc_doppelsoldner_gloves と同値 |
+
+### 補足
+
+本体 MOD は `mc_terciopikeman_gloves` を `material_type="Leather"` としていますが、重量が 1.5 と、同種の革製籠手（`mc_peaky_gloves` 0.3、`mc_doppelsoldner_gloves` 0.3）の 5 倍になっています。板甲の籠手テンプレートを流用したものと思われます。本パッチは実際の材質（革）に従って設定しており、重量は本体 MOD 側の問題で本パッチの対象外です。
+
+### 検証結果
+
+`rbm_compat_items.xslt` のルールは計 85 件、すべて一意で数値も妥当です。本体 MOD の 53 点すべてについて防御フィールドが 100% 網羅されており、未対応・部分対応・孤立ルールはありません。
+
+本体 MOD には中国語の文字列が 4 件不足しています：`MCTercioEliteHelmetB`、`MCTercioPikemanCuirass`、`MCTercioPikemanGloves`、`MCTercioPikemanShoes`。本体 MOD 側の問題であり、本パッチの対象外です。
+
+---
 
 ## RBM 互換設定の補完記録：2026-10-31
 
