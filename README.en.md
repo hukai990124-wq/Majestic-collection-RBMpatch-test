@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
 
-Updated on 2026-11-02. Patch version: v1.3.2. This update adds RBM compatibility for the Tercio series and removes legacy rules that pointed at items no longer present in the base mod. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-05. Patch version: v1.3.3. This update adds RBM compatibility for the Tercio series and removes legacy rules that pointed at items no longer present in the base mod. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -12,13 +12,14 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
+- Adds 3 rules for the new mc_tercio_burgonet helmet and the terciorapier_blade.
 - Adds 1 rule for the new mc_terciopikeman_gloves.
 - Adds 2 rules for the split mc_tercioelite_helmet_b and the new mc_terciopikeman_shoes.
 - Adds 10 rules covering the 6 Tercio series items: elite helmet, elite cuirass, elite shoulders, elite boots, elite gauntlets, and pikeman cuirass.
 - Every target value reuses an existing rule whose base-module protection value is identical, so no new balance judgement is introduced.
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
-- Covers the base mod's 53 equipment items, 14 crafted weapons, and 39 crafting pieces; 85 protection fields and 23 damage factors, with no gaps and no partial coverage.
-- 102 of 106 item and piece names inherit the base mod's Chinese translations; four Tercio strings are still missing in the base module. The gilded dragon sword remains two-handed only.
+- Covers the base mod's 54 equipment items, 15 crafted weapons, and 43 crafting pieces; 86 protection fields and 25 damage factors, with no gaps and no partial coverage.
+- All 112 item and piece names inherit the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
 - Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.

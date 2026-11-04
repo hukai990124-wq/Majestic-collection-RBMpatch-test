@@ -108,6 +108,10 @@
              plate boot tier. If the base module is later corrected to Cloth, this
              rule still holds; only the material attribute would change. -->
         <xsl:when test="$key='mc_tercioelite_helmet_b/head_armor'">120</xsl:when>
+        <!-- 2026-11-05: Tercio Burgonet added to the base module (head 58, Plate).
+             Same base value as mc_landsknecht_doppelsoldner_helmet, which also
+             maps to 120, so it takes that target. -->
+        <xsl:when test="$key='mc_tercio_burgonet/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_terciopikeman_shoes/leg_armor'">20</xsl:when>
         <!-- 2026-11-02: Tercio Pikeman Gloves added to the base module (arm 18,
              material_type Leather). Follows the leather glove tier, same target as

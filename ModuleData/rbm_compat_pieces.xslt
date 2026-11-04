@@ -34,6 +34,10 @@
         <xsl:when test="$key='gilded_crescent_blade/Swing'">1.20</xsl:when>
         <xsl:when test="$key='side_blade/Thrust'">1.05</xsl:when>
         <xsl:when test="$key='side_blade/Swing'">1.00</xsl:when>
+        <!-- 2026-11-05: Tercio Rapier blade. Base values (Thrust 5.5 / Swing 5.1)
+             are identical to conquistador_blade, so it takes the same targets. -->
+        <xsl:when test="$key='terciorapier_blade/Thrust'">1.05</xsl:when>
+        <xsl:when test="$key='terciorapier_blade/Swing'">1.00</xsl:when>
         <xsl:when test="$key='decorated_mace_blade/Swing'">1.30</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Thrust'">1.10</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Swing'">1.35</xsl:when>

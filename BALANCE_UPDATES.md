@@ -1,11 +1,27 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-02
+最新更新 / Latest / 最新：2026-11-05
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-05
+
+本次新增 3 条规则，对应主模组新加入的勃艮第头盔与大方阵刺剑。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_tercio_burgonet/head_armor | 120 | 板甲头盔，原始头部防护 58；与 mc_landsknecht_doppelsoldner_helmet 同值，沿用其目标值 |
+| 武器 | terciorapier_blade/Thrust | 1.05 | 原始 5.5，与 conquistador_blade 完全一致，沿用其目标值 |
+| 武器 | terciorapier_blade/Swing | 1.00 | 原始 5.1，与 conquistador_blade 完全一致，沿用其目标值 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 86 条、`rbm_compat_pieces.xslt` 共 25 条，全部唯一、数值合法。主模组 54 件装备、15 把组合武器、43 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。
+
+---
 
 ## RBM 补齐记录：2026-11-02
 
@@ -178,6 +194,22 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-05
+
+This update adds 3 rules for the burgonet helmet and the Tercio rapier newly added to the base module.
+
+| Category | Item / field | New target value | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_tercio_burgonet/head_armor | 120 | Plate helmet, base head protection 58; identical to mc_landsknecht_doppelsoldner_helmet, so it takes that target |
+| weapons | terciorapier_blade/Thrust | 1.05 | Base 5.5, identical to conquistador_blade, so it takes that target |
+| weapons | terciorapier_blade/Swing | 1.00 | Base 5.1, identical to conquistador_blade, so it takes that target |
+
+### Verification results
+
+`rbm_compat_items.xslt` holds 86 rules and `rbm_compat_pieces.xslt` 25, all unique and numerically valid. Coverage is 100% across 54 items, 15 crafted weapons and 43 crafting pieces, with no gaps, no partial coverage and no orphan rules.
+
+---
+
 ## RBM compatibility additions: 2026-11-02
 
 This update adds 1 rule for the pikeman gloves newly added to the base module.
@@ -340,6 +372,22 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-05
+
+本体 MOD に新規追加されたバーゴネット兜とテルシオ・レイピアに対応し、3 件のルールを追加しました。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_tercio_burgonet/head_armor | 120 | 板甲の兜、元の頭部防御は 58。mc_landsknecht_doppelsoldner_helmet と同値のため、その目標値を踏襲 |
+| 武器 | terciorapier_blade/Thrust | 1.05 | 元の値 5.5 が conquistador_blade と完全に一致するため、その目標値を踏襲 |
+| 武器 | terciorapier_blade/Swing | 1.00 | 元の値 5.1 が conquistador_blade と完全に一致するため、その目標値を踏襲 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 86 件、`rbm_compat_pieces.xslt` は 25 件のルールを持ち、すべて一意で数値も妥当です。本体 MOD の装備 54 点、組み立て式武器 15 点、鍛冶パーツ 43 点を 100% 網羅しており、未対応・部分対応・孤立ルールはありません。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-02
 
