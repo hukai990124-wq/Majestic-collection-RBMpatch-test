@@ -1,11 +1,28 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-05
+最新更新 / Latest / 最新：2026-11-10
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-10
+
+本次新增 4 条规则，对应主模组 11-07 加入的长矛兵肩甲、大方阵长矛与大方阵贵族佩剑。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_terciopikeman_pauldron/body_armor | 30 | 单片肩甲（主片 + 短 turner），原始身体防护 18；比 mc_landsknecht_doppelsoldner_cape（20 → 33）略低一档 |
+| 武器 | terciopike_point/Thrust | 1.30 | 步兵长矛，仅刺击；沿用三条骑枪矛头的目标值。主模组原始值由 2.974377 上调至 3.1 |
+| 武器 | tercionoblerapier_blade/Thrust | 1.05 | 原始 5.5，与 conquistador_blade、terciorapier_blade 完全一致 |
+| 武器 | tercionoblerapier_blade/Swing | 1.00 | 原始 5.1，同上 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 87 条、`rbm_compat_pieces.xslt` 共 28 条，全部唯一、数值合法。主模组 55 件装备、17 把组合武器、49 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 121 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
+
+---
 
 ## RBM 补齐记录：2026-11-05
 
@@ -194,6 +211,23 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-10
+
+Four new rules cover the pikeman pauldron, the Tercio pike and the Tercio noble rapier added to the base module on 2026-11-07.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_terciopikeman_pauldron/body_armor | 30 | Single-plate cop with a short turner, base 18; docked one step below mc_landsknecht_doppelsoldner_cape (20 -> 33) |
+| weapons | terciopike_point/Thrust | 1.30 | Infantry thrust-only head; follows the tier used by the three jousting points. Base value raised from 2.974377 to 3.1 in the base module |
+| weapons | tercionoblerapier_blade/Thrust | 1.05 | Base 5.5, identical to conquistador_blade and terciorapier_blade |
+| weapons | tercionoblerapier_blade/Swing | 1.00 | Base 5.1, as above |
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 87 rules and `rbm_compat_pieces.xslt` 28, all unique and numerically valid. Coverage is 100% for 55 items, 17 crafted weapons and 49 crafting pieces, with no gaps or orphans. All 121 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
+
+---
+
 ## RBM compatibility additions: 2026-11-05
 
 This update adds 3 rules for the burgonet helmet and the Tercio rapier newly added to the base module.
@@ -372,6 +406,23 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-10
+
+2026-11-07 に本体 MOD へ追加された長槍兵の肩甲・長槍・貴族佩剣を対象に、4 件のルールを追加しました。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_terciopikeman_pauldron/body_armor | 30 | 一枚板の主片と短い turner からなる肩甲。元の値 18 で、mc_landsknecht_doppelsoldner_cape（20 → 33）より一段低く設定 |
+| 武器 | terciopike_point/Thrust | 1.30 | 歩兵用の刺撃専用穂先。3 種のジョスティング穂先と同じ帯を踏襲。本体 MOD の元の値は 2.974377 から 3.1 へ引き上げ |
+| 武器 | tercionoblerapier_blade/Thrust | 1.05 | 元の値 5.5 は conquistador_blade / terciorapier_blade と完全一致 |
+| 武器 | tercionoblerapier_blade/Swing | 1.00 | 元の値 5.1、同上 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 87 件、`rbm_compat_pieces.xslt` は 28 件となり、すべて一意で数値も妥当です。本体 MOD の装備 55 点・組み立て式武器 17 点・鍛冶パーツ 49 点を 100% 網羅し、未対応・孤立ルールはありません。名称 121 件すべてに中国語訳が入り、`verify_patch.ps1` も全項目通過しました。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-05
 

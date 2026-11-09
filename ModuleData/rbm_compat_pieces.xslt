@@ -38,6 +38,13 @@
              are identical to conquistador_blade, so it takes the same targets. -->
         <xsl:when test="$key='terciorapier_blade/Thrust'">1.05</xsl:when>
         <xsl:when test="$key='terciorapier_blade/Swing'">1.00</xsl:when>
+        <!-- 2026-11-10: Tercio noble rapier duplicates conquistador_blade
+             (Thrust 5.5 / Swing 5.1), so it takes the same targets.
+             Tercio pike point is an infantry thrust-only head -> 1.30,
+             same tier as the three jousting points already in this file. -->
+        <xsl:when test="$key='tercionoblerapier_blade/Thrust'">1.05</xsl:when>
+        <xsl:when test="$key='tercionoblerapier_blade/Swing'">1.00</xsl:when>
+        <xsl:when test="$key='terciopike_point/Thrust'">1.30</xsl:when>
         <xsl:when test="$key='decorated_mace_blade/Swing'">1.30</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Thrust'">1.10</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Swing'">1.35</xsl:when>

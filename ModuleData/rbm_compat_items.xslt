@@ -117,6 +117,10 @@
              material_type Leather). Follows the leather glove tier, same target as
              mc_peaky_gloves and mc_doppelsoldner_gloves. -->
         <xsl:when test="$key='mc_terciopikeman_gloves/arm_armor'">24</xsl:when>
+        <!-- 2026-11-10: Tercio pikeman pauldron is a single cop + short turner
+             (body 18), not an articulated pauldron. Docked below the plate
+             cape tier used by mc_landsknecht_doppelsoldner_cape (20 -> 33). -->
+        <xsl:when test="$key='mc_terciopikeman_pauldron/body_armor'">30</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/head_armor'">25</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/body_armor'">110</xsl:when>
         <xsl:when test="$key='mc_tercioelite_plate/leg_armor'">35</xsl:when>
