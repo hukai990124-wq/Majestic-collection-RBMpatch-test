@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
 
-Updated on 2026-11-10. Patch version: v1.3.4. This update adds RBM compatibility for the Tercio pikeman pauldron, the Tercio pike, and the Tercio noble rapier. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-10. Patch version: v1.3.4. This update adds RBM compatibility for the Tercio pikeman pauldron, the Tercio pike, and the Tercio noble rapier; the base module also lowered that pauldron's weight from 5 to 2.5 on the same day, which does not affect any rule in this patch. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 

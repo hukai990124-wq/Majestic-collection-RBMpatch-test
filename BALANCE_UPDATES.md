@@ -18,6 +18,12 @@
 | 武器 | tercionoblerapier_blade/Thrust | 1.05 | 原始 5.5，与 conquistador_blade、terciorapier_blade 完全一致 |
 | 武器 | tercionoblerapier_blade/Swing | 1.00 | 原始 5.1，同上 |
 
+### 主模组侧配套修正
+
+同日主模组将 `mc_terciopikeman_pauldron` 的重量由 `5` 调整为 `2.5`：该肩甲只有板金主片与一片短 turner，净重应落在同套胸甲之下。调整后长矛兵全套与大方阵精英全套的负重差由 1.7 kg 拉开到 4.2 kg，与两者 24 点的防护差相称。防御值本身未动（原始 `body_armor` 仍为 18），本补丁目标值 `30` 的依据不变，规则条数也不变。
+
+另需说明：本文件早前条目提到的 `mc_terciopikeman_shoes` 重量 `3`、`mc_terciopikeman_gloves` 重量 `1.5` 是主模组当时的数值，现在均已修正为 `0.3` 与 `0.3`，材质仍分别为布与皮革，本补丁对应规则不受影响。
+
 ### 校验结果
 
 `rbm_compat_items.xslt` 规则共 87 条、`rbm_compat_pieces.xslt` 共 28 条，全部唯一、数值合法。主模组 55 件装备、17 把组合武器、49 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 121 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
@@ -222,6 +228,12 @@ Four new rules cover the pikeman pauldron, the Tercio pike and the Tercio noble 
 | weapons | tercionoblerapier_blade/Thrust | 1.05 | Base 5.5, identical to conquistador_blade and terciorapier_blade |
 | weapons | tercionoblerapier_blade/Swing | 1.00 | Base 5.1, as above |
 
+### Base-module adjustments made alongside
+
+On the same day the base module lowered `mc_terciopikeman_pauldron` from `5` to `2.5` in weight: the piece is a single plate cop plus one short turner, so its net weight belongs below the cuirass of the same set. The gap between the full pikeman kit and the Tercio elite kit widens from 1.7 kg to 4.2 kg, which matches the 24-point armour difference between them. The armour values themselves are untouched (base `body_armor` stays at 18), so the `30` target here and the rule count are unchanged.
+
+One clarification: the earlier entries in this file cite `mc_terciopikeman_shoes` at weight `3` and `mc_terciopikeman_gloves` at weight `1.5`. Those were the base-module values at the time; both are now `0.3` (cloth and leather respectively). The rules here are unaffected.
+
 ### Verification results
 
 `rbm_compat_items.xslt` now holds 87 rules and `rbm_compat_pieces.xslt` 28, all unique and numerically valid. Coverage is 100% for 55 items, 17 crafted weapons and 49 crafting pieces, with no gaps or orphans. All 121 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
@@ -417,6 +429,12 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 | 武器 | terciopike_point/Thrust | 1.30 | 歩兵用の刺撃専用穂先。3 種のジョスティング穂先と同じ帯を踏襲。本体 MOD の元の値は 2.974377 から 3.1 へ引き上げ |
 | 武器 | tercionoblerapier_blade/Thrust | 1.05 | 元の値 5.5 は conquistador_blade / terciorapier_blade と完全一致 |
 | 武器 | tercionoblerapier_blade/Swing | 1.00 | 元の値 5.1、同上 |
+
+### 本体 MOD 側の同時修正
+
+同日、本体 MOD は `mc_terciopikeman_pauldron` の重量を `5` から `2.5` に変更しました。この肩甲は板金の主片と短い turner ひとつだけで構成されるため、同じ一式の胸甲より軽い帯に収まるべきものです。この調整で、長槍兵の一式とテルシオ精鋭の一式の重量差は 1.7 kg から 4.2 kg に広がり、両者の防御力差 24 点に見合うようになりました。防御値自体は変更していないため（元の `body_armor` は 18 のまま）、本パッチの設定値 `30` の根拠もルール件数も変わりません。
+
+なお、本ファイルの以前の項目にある `mc_terciopikeman_shoes` の重量 `3` と `mc_terciopikeman_gloves` の重量 `1.5` は当時の本体 MOD の値です。現在はいずれも `0.3`（それぞれ布と皮革）に修正済みで、本パッチの該当ルールには影響しません。
 
 ### 検証結果
 

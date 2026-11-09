@@ -5,7 +5,7 @@
 <details>
 <summary><strong>简体中文</strong></summary>
 
-2026-11-10 更新，补丁版本 v1.3.4。本次为大方阵长矛兵肩甲、大方阵长矛与大方阵贵族佩剑补齐 RBM 适配。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
+2026-11-10 更新，补丁版本 v1.3.4。本次为大方阵长矛兵肩甲、大方阵长矛与大方阵贵族佩剑补齐 RBM 适配；同日主模组将该肩甲重量由 5 调整为 2.5，不影响本补丁的任何规则。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
 
@@ -63,7 +63,7 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 <details>
 <summary><strong>English</strong></summary>
 
-Updated on 2026-11-10. Patch version: v1.3.4. This update adds RBM compatibility for the Tercio pikeman pauldron, the Tercio pike, and the Tercio noble rapier. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-10. Patch version: v1.3.4. This update adds RBM compatibility for the Tercio pikeman pauldron, the Tercio pike, and the Tercio noble rapier; the base module also lowered that pauldron's weight from 5 to 2.5 on the same day, which does not affect any rule in this patch. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -121,7 +121,7 @@ This patch contains no files from RBM or MajesticCollection. It only transforms 
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-11-10 更新。パッチのバージョンは v1.3.4 です。テルシオ長槍兵の肩甲・長槍・貴族佩剣の RBM 互換設定を追加しました。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-11-10 更新。パッチのバージョンは v1.3.4 です。テルシオ長槍兵の肩甲・長槍・貴族佩剣の RBM 互換設定を追加しました。同日、本体 MOD 側でこの肩甲の重量を 5 から 2.5 に変更していますが、本パッチのルールには影響しません。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
