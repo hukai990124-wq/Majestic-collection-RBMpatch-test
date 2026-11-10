@@ -112,6 +112,11 @@
              Same base value as mc_landsknecht_doppelsoldner_helmet, which also
              maps to 120, so it takes that target. -->
         <xsl:when test="$key='mc_tercio_burgonet/head_armor'">120</xsl:when>
+        <!-- 2026-11-11: Tercio Cabasset Helmet added to the base module (head 55,
+             Plate, weight 4). Same base value as mc_tercioelite_helmet,
+             mc_tercioelite_helmet_b and mc_royal_conqueror_helmet, all of which
+             map to 120, so it takes that target. -->
+        <xsl:when test="$key='mc_tercio_cabasset_helmet/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_terciopikeman_shoes/leg_armor'">20</xsl:when>
         <!-- 2026-11-02: Tercio Pikeman Gloves added to the base module (arm 18,
              material_type Leather). Follows the leather glove tier, same target as

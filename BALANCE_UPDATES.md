@@ -1,11 +1,25 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-10
+最新更新 / Latest / 最新：2026-11-11
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-11
+
+本次新增 1 条规则，对应主模组新加入的大方阵卡巴塞头盔。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_tercio_cabasset_helmet/head_armor | 120 | 板甲头盔，原始头部防护 55、重量 4；与 mc_tercioelite_helmet、mc_tercioelite_helmet_b、mc_royal_conqueror_helmet 的原始值完全一致，沿用它们的 120 档 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 88 条、`rbm_compat_pieces.xslt` 共 28 条，全部唯一、数值合法。主模组 56 件装备、17 把组合武器、49 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 122 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
+
+---
 
 ## RBM 补齐记录：2026-11-10
 
@@ -217,6 +231,20 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-11
+
+One new rule covers the Tercio cabasset helmet added to the base module.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_tercio_cabasset_helmet/head_armor | 120 | Plate helmet, base head 55 at weight 4; identical base value to mc_tercioelite_helmet, mc_tercioelite_helmet_b and mc_royal_conqueror_helmet, so it takes their 120 tier |
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 88 rules and `rbm_compat_pieces.xslt` 28, all unique and numerically valid. Coverage is 100% for 56 items, 17 crafted weapons and 49 crafting pieces, with no gaps or orphans. All 122 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
+
+---
+
 ## RBM compatibility additions: 2026-11-10
 
 Four new rules cover the pikeman pauldron, the Tercio pike and the Tercio noble rapier added to the base module on 2026-11-07.
@@ -418,6 +446,20 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-11
+
+本体 MOD に追加されたテルシオ・カバセット兜に対応する 1 件のルールを追加しました。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_tercio_cabasset_helmet/head_armor | 120 | 板金の兜。元の値は頭部 55・重量 4 で、mc_tercioelite_helmet、mc_tercioelite_helmet_b、mc_royal_conqueror_helmet と完全に一致するため、同じ 120 の帯を踏襲 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 88 件、`rbm_compat_pieces.xslt` は 28 件となり、すべて一意で数値も妥当です。本体 MOD の装備 56 点・組み立て式武器 17 点・鍛冶パーツ 49 点を 100% 網羅し、未対応・孤立ルールはありません。名称 122 件すべてに中国語訳が入り、`verify_patch.ps1` も全項目通過しました。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-10
 
