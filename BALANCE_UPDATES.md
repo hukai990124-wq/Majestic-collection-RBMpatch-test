@@ -1,11 +1,31 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-11
+最新更新 / Latest / 最新：2026-11-12
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-12
+
+本次新增 7 条规则，覆盖主模组新加入的哥特板甲整套 5 件。每一件的原始防护值、重量与材质都与既有板甲装备完全一致，因此全部沿用对应装备的目标值，未引入新的平衡判断。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_gothic_plate/body_armor | 120 | 原始 65、重量 20 kg、Plate，与 mc_gilded_acanthus_plate、mc_maxmilian_armor 完全一致 |
+| 装备 | mc_gothic_plate/head_armor | 30 | 原始 15、重量 20 kg，同上两件 |
+| 装备 | mc_gothic_plate/leg_armor | 45 | 原始 20、重量 20 kg，同上两件 |
+| 装备 | mc_gothic_sallet_helmet/head_armor | 130 | 原始 60、重量 4 kg、Plate，与 mc_maximilian_heavy_helmet 等五件 60/4 头盔同档 |
+| 装备 | mc_gothic_pauldron/body_armor | 40 | 原始 25、重量 5 kg，与另外四件板甲肩甲完全一致 |
+| 装备 | mc_gothic_gauntlets/arm_armor | 55 | 原始 30、重量 1.5 kg，与 mc_gilded_acanthus_gauntlets、mc_maxmilian_gauntlets 完全一致 |
+| 装备 | mc_gothic_boots/leg_armor | 55 | 原始 30、重量 3.5 kg，与 mc_gilded_acanthus_leg_armour、mc_maximilian_heavy_boots 完全一致 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 95 条、`rbm_compat_pieces.xslt` 共 28 条，全部唯一、数值合法。主模组 61 件装备、17 把组合武器、49 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 127 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
+
+---
 
 ## RBM 补齐记录：2026-11-11
 
@@ -231,6 +251,26 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-12
+
+Seven new rules cover the five-piece Gothic Plate set added to the base module. Every base protection value, weight and material matches an existing plate item exactly, so each field reuses that item's target instead of a new balance judgement.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_gothic_plate/body_armor | 120 | Base 65 at 20 kg, Plate; identical to mc_gilded_acanthus_plate and mc_maxmilian_armor |
+| items | mc_gothic_plate/head_armor | 30 | Base 15 at 20 kg, same two references |
+| items | mc_gothic_plate/leg_armor | 45 | Base 20 at 20 kg, same two references |
+| items | mc_gothic_sallet_helmet/head_armor | 130 | Base 60 at 4 kg, Plate; same tier as mc_maximilian_heavy_helmet and the four other 60/4 helmets |
+| items | mc_gothic_pauldron/body_armor | 40 | Base 25 at 5 kg; identical to the four other plate shoulders |
+| items | mc_gothic_gauntlets/arm_armor | 55 | Base 30 at 1.5 kg; identical to mc_gilded_acanthus_gauntlets and mc_maxmilian_gauntlets |
+| items | mc_gothic_boots/leg_armor | 55 | Base 30 at 3.5 kg; identical to mc_gilded_acanthus_leg_armour and mc_maximilian_heavy_boots |
+
+### Verification results
+
+`rbm_compat_items.xslt` now holds 95 rules and `rbm_compat_pieces.xslt` 28, all unique and numerically valid. Coverage is 100% for 61 items, 17 crafted weapons and 49 crafting pieces, with no gaps or orphans. All 127 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
+
+---
+
 ## RBM compatibility additions: 2026-11-11
 
 One new rule covers the Tercio cabasset helmet added to the base module.
@@ -446,6 +486,26 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-12
+
+本体 MOD に追加されたゴシック・プレート一式 5 点に対応する 7 件のルールを追加しました。各部位の元の防御値・重量・材質は既存の板金装備と完全に一致するため、すべて対応する装備の設定値をそのまま踏襲し、新たなバランス判断は行っていません。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_gothic_plate/body_armor | 120 | 元の値 65・重量 20 kg・Plate で、mc_gilded_acanthus_plate と mc_maxmilian_armor に完全一致 |
+| 装備 | mc_gothic_plate/head_armor | 30 | 元の値 15・重量 20 kg で、上記 2 点と同じ |
+| 装備 | mc_gothic_plate/leg_armor | 45 | 元の値 20・重量 20 kg で、上記 2 点と同じ |
+| 装備 | mc_gothic_sallet_helmet/head_armor | 130 | 元の値 60・重量 4 kg・Plate で、mc_maximilian_heavy_helmet ほか 60/4 の兜 4 点と同じ帯 |
+| 装備 | mc_gothic_pauldron/body_armor | 40 | 元の値 25・重量 5 kg で、他の板金肩甲 4 点に完全一致 |
+| 装備 | mc_gothic_gauntlets/arm_armor | 55 | 元の値 30・重量 1.5 kg で、mc_gilded_acanthus_gauntlets と mc_maxmilian_gauntlets に完全一致 |
+| 装備 | mc_gothic_boots/leg_armor | 55 | 元の値 30・重量 3.5 kg で、mc_gilded_acanthus_leg_armour と mc_maximilian_heavy_boots に完全一致 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 95 件、`rbm_compat_pieces.xslt` は 28 件となり、すべて一意で数値も妥当です。本体 MOD の装備 61 点・組み立て式武器 17 点・鍛冶パーツ 49 点を 100% 網羅し、未対応・孤立ルールはありません。名称 127 件すべてに中国語訳が入り、`verify_patch.ps1` も全項目通過しました。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-11
 

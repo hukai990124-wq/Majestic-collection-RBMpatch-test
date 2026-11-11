@@ -26,6 +26,22 @@
         <xsl:when test="$key='mc_gilded_acanthus_leg_armour/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_shoulder_armour/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_helmet/head_armor'">130</xsl:when>
+        <!-- 2026-11-12: Gothic Plate set added to the base module. Every base value,
+             weight and material matches an existing plate item exactly, so each
+             field reuses that item's target instead of a new judgement:
+               plate    head 15 / body 65 / leg 20, 20 kg -> mc_gilded_acanthus_plate
+                        and mc_maxmilian_armor (30 / 120 / 45)
+               sallet   head 60, 4 kg -> the 130 tier, same as the five 60/4 helmets
+               pauldron body 25, 5 kg -> 40, same as four other plate shoulders
+               gauntlet arm 30, 1.5 kg -> 55, same as mc_gilded_acanthus_gauntlets
+               boots    leg 30, 3.5 kg -> 55, same as mc_gilded_acanthus_leg_armour -->
+        <xsl:when test="$key='mc_gothic_plate/head_armor'">30</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate/body_armor'">120</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate/leg_armor'">45</xsl:when>
+        <xsl:when test="$key='mc_gothic_sallet_helmet/head_armor'">130</xsl:when>
+        <xsl:when test="$key='mc_gothic_pauldron/body_armor'">40</xsl:when>
+        <xsl:when test="$key='mc_gothic_gauntlets/arm_armor'">55</xsl:when>
+        <xsl:when test="$key='mc_gothic_boots/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_vaegir_guard_commander_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_shoulder/body_armor'">40</xsl:when>

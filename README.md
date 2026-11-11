@@ -5,7 +5,7 @@
 <details>
 <summary><strong>简体中文</strong></summary>
 
-2026-11-11 更新，补丁版本 v1.3.5。本次为大方阵卡巴塞头盔 mc_tercio_cabasset_helmet 补齐 RBM 适配；此前一版已覆盖大方阵长矛兵肩甲、大方阵长矛与大方阵贵族佩剑，主模组同期将该肩甲重量由 5 调整为 2.5，不影响本补丁的任何规则。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
+2026-11-12 更新，补丁版本 v1.3.6。本次为哥特板甲整套 5 件（胸甲、萨莱特盔、肩甲、手甲、战靴）补齐 RBM 适配；此前一版已覆盖大方阵卡巴塞头盔。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
 
@@ -15,6 +15,7 @@
 
 ## 本次更新
 
+- 新增 7 条规则，覆盖哥特板甲整套：mc_gothic_plate（头/身/腿三段）、mc_gothic_sallet_helmet、mc_gothic_pauldron、mc_gothic_gauntlets、mc_gothic_boots。
 - 新增 1 条规则，覆盖主模组新增的大方阵卡巴塞头盔 mc_tercio_cabasset_helmet。
 - 新增 4 条规则，覆盖大方阵长矛兵肩甲 mc_terciopikeman_pauldron、大方阵长矛 terciopike_point 与大方阵贵族佩剑 tercionoblerapier_blade。
 - 新增 3 条规则，覆盖主模组新增的勃艮第头盔 mc_tercio_burgonet 与大方阵士兵佩剑 terciorapier_blade。
@@ -23,8 +24,8 @@
 - 新增 10 条规则，覆盖西班牙方阵（Tercio）系列 6 件装备：精英头盔、精英胸甲、精英肩甲、精英战靴、精英护手与长矛兵胸甲。
 - 上述目标值全部沿用本补丁中原始防护值完全相同的既有规则，未引入新的平衡判断。
 - 删除 14 条指向已不存在物品的遗留规则，涉及旧 knightly 系列、gold_maxmilian 系列，以及两件改名前后的旧编号。当前已无孤儿规则。
-- 覆盖主模组 56 件装备、17 把组合武器和 49 个锻造部件；共 88 个防护字段和 28 个伤害系数，无遗漏项、无部分覆盖项。
-- 122 个物品和部件名称全部继承主模组的中文翻译。双头龙剑仍仅可双手使用。
+- 覆盖主模组 61 件装备、17 把组合武器和 49 个锻造部件；共 95 个防护字段和 28 个伤害系数，无遗漏项、无部分覆盖项。
+- 127 个物品和部件名称全部继承主模组的中文翻译。双头龙剑仍仅可双手使用。
 - 本补丁自本版本起以 **MIT 协议**开源发布，详见 [LICENSE](LICENSE)。
 
 所有新增数值、参考部件和取值依据见 [BALANCE_UPDATES.md](BALANCE_UPDATES.md)。新增数值是兼容性平衡目标，不代表已在战斗中验证。
@@ -64,7 +65,7 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 <details>
 <summary><strong>English</strong></summary>
 
-Updated on 2026-11-11. Patch version: v1.3.5. This update adds RBM compatibility for the Tercio cabasset helmet mc_tercio_cabasset_helmet; the previous version covered the Tercio pikeman pauldron, the Tercio pike and the Tercio noble rapier, and the base module lowered that pauldron's weight from 5 to 2.5 at the same time, which does not affect any rule in this patch. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-12. Patch version: v1.3.6. This update adds RBM compatibility for the full Gothic Plate set: cuirass, sallet, pauldron, gauntlets and boots. The previous version covered the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -74,6 +75,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
+- Adds 7 rules for the full Gothic Plate set: mc_gothic_plate (head, body and leg), mc_gothic_sallet_helmet, mc_gothic_pauldron, mc_gothic_gauntlets and mc_gothic_boots.
 - Adds 1 rule for the new mc_tercio_cabasset_helmet.
 - Adds 4 rules for mc_terciopikeman_pauldron, terciopike_point and tercionoblerapier_blade.
 - Adds 3 rules for the new mc_tercio_burgonet helmet and the terciorapier_blade.
@@ -82,8 +84,8 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 - Adds 10 rules covering the 6 Tercio series items: elite helmet, elite cuirass, elite shoulders, elite boots, elite gauntlets, and pikeman cuirass.
 - Every target value reuses an existing rule whose base-module protection value is identical, so no new balance judgement is introduced.
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
-- Covers the base mod's 56 equipment items, 17 crafted weapons, and 49 crafting pieces; 88 protection fields and 28 damage factors, with no gaps and no partial coverage.
-- All 122 item and piece names inherit the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
+- Covers the base mod's 61 equipment items, 17 crafted weapons, and 49 crafting pieces; 95 protection fields and 28 damage factors, with no gaps and no partial coverage.
+- All 127 item and piece names inherit the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
 - Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.
@@ -123,7 +125,7 @@ This patch contains no files from RBM or MajesticCollection. It only transforms 
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-11-11 更新。パッチのバージョンは v1.3.5 です。テルシオ・カバセット兜 mc_tercio_cabasset_helmet の RBM 互換設定を追加しました。前版ではテルシオ長槍兵の肩甲・長槍・貴族佩剣に対応し、同時に本体 MOD 側で肩甲の重量を 5 から 2.5 に変更していますが、本パッチのルールには影響しません。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-11-12 更新。パッチのバージョンは v1.3.6 です。ゴシック・プレート一式 5 点（胸甲・サレット兜・肩甲・籠手・脚甲）の RBM 互換設定を追加しました。前版ではテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
@@ -133,6 +135,7 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 
 ## 今回の更新内容
 
+- ゴシック・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate（頭・胴・脚）、mc_gothic_sallet_helmet、mc_gothic_pauldron、mc_gothic_gauntlets、mc_gothic_boots。
 - テルシオ・カバセット兜 mc_tercio_cabasset_helmet に対応する 1 件のルールを追加しました。
 - 長槍兵の肩甲 mc_terciopikeman_pauldron、長槍 terciopike_point、貴族佩剣 tercionoblerapier_blade に対応する 4 件のルールを追加しました。
 - 新規追加されたバーゴネット兜 mc_tercio_burgonet とテルシオ・レイピア terciorapier_blade に対応する 3 件のルールを追加しました。
@@ -141,8 +144,8 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 - テルシオ（Tercio）シリーズ 6 点（エリート兜・エリート胸甲・エリート肩甲・エリートブーツ・エリート籠手・長槍兵胸甲）を対象に、10 件のルールを追加しました。
 - 目標値はすべて、本体 MOD 側の防御値が完全に一致する既存ルールを踏襲しており、新たなバランス判断は行っていません。
 - 本体 MOD から削除されたアイテムを対象としていた旧ルール 14 件（旧 knightly シリーズ、gold_maxmilian シリーズ、改名前の旧 ID 2 件）を削除しました。孤立したルールは残っていません。
-- 本体 MOD の装備 56 点、組み立て式武器 17 点、鍛冶パーツ 49 点を対象とし、防御値 88 項目・ダメージ係数 28 項目に対応しています。未対応・部分対応はありません。
-- 名称 122 件すべてが本体 MOD の中国語翻訳を継承しています。金装の双頭竜剣は両手専用のままです。
+- 本体 MOD の装備 61 点、組み立て式武器 17 点、鍛冶パーツ 49 点を対象とし、防御値 95 項目・ダメージ係数 28 項目に対応しています。未対応・部分対応はありません。
+- 名称 127 件すべてが本体 MOD の中国語翻訳を継承しています。金装の双頭竜剣は両手専用のままです。
 - 本バージョンより、本パッチは **MIT ライセンス** で公開されます。詳細は [LICENSE](LICENSE) を参照してください。
 
 追加した数値、参照アイテム、設定理由は [BALANCE_UPDATES.md](BALANCE_UPDATES.md) を参照してください。これらの数値は互換性のためのバランス調整目標であり、実戦で検証済みの値ではありません。
