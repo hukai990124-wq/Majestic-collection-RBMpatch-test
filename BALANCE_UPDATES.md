@@ -9,6 +9,25 @@
 
 ## RBM 补齐记录：2026-11-12
 
+### 黑钢哥特板甲与卢塞恩锤
+
+本次新增 8 条规则：黑钢哥特板甲整套 5 件共 7 条护甲规则，卢塞恩锤 1 条伤害规则。
+
+黑钢版每一件的原始防护值、重量与材质都与原色版逐项相同（`plate_items.xml` 中五个属性块完全一致），因此直接沿用原色版目标值，不引入新的平衡判断。卢塞恩锤是本模组第一把双手长柄钝击武器，此前的规则集中没有同类先例，取值说明见下表。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_gothic_plate_blackend/body_armor | 120 | 原始 65、重量 20 kg、Plate，与原色 mc_gothic_plate 同值 |
+| 装备 | mc_gothic_plate_blackend/head_armor | 30 | 原始 15、重量 20 kg，同上 |
+| 装备 | mc_gothic_plate_blackend/leg_armor | 45 | 原始 20、重量 20 kg，同上 |
+| 装备 | mc_gothic_sallet_helmet_blackend/head_armor | 130 | 原始 60、重量 4 kg、Plate，与原色萨莱特盔同值 |
+| 装备 | mc_gothic_pauldron_blackend/body_armor | 40 | 原始 25、重量 5 kg，与原色肩甲同值 |
+| 装备 | mc_gothic_gauntlets_blackend/arm_armor | 55 | 原始 30、重量 1.5 kg，与原色手甲同值 |
+| 装备 | mc_gothic_boots_blackend/leg_armor | 55 | 原始 30、重量 3.5 kg，与原色战靴同值 |
+| 武器 | lucernehammer_point/Swing | 1.35 | 原始 4.1、钝击、仅挥击，全长 215.86 cm、重 3.5 kg。本文件双手档统一取 1.35（klingenmeister_blade、镀金龙剑）；钝击的破甲优势由 damage_type="Blunt" 承担，不再叠加倍率 |
+
+### 哥特板甲原色整套
+
 本次新增 7 条规则，覆盖主模组新加入的哥特板甲整套 5 件。每一件的原始防护值、重量与材质都与既有板甲装备完全一致，因此全部沿用对应装备的目标值，未引入新的平衡判断。
 
 | 类别 | 物品/字段 | 新目标值 | 参考与依据 |
@@ -23,7 +42,7 @@
 
 ### 校验结果
 
-`rbm_compat_items.xslt` 规则共 95 条、`rbm_compat_pieces.xslt` 共 28 条，全部唯一、数值合法。主模组 61 件装备、17 把组合武器、49 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 127 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
+`rbm_compat_items.xslt` 规则共 102 条、`rbm_compat_pieces.xslt` 共 29 条，全部唯一、数值合法。主模组 66 件装备、18 把组合武器、51 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 135 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
 
 ---
 
@@ -253,6 +272,25 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 
 ## RBM compatibility additions: 2026-11-12
 
+### Blackened Gothic Plate and the Lucerne hammer
+
+Eight new rules: seven protection fields for the five-piece blackened Gothic set, plus one damage rule for the Lucerne hammer.
+
+Every base value, weight and material of the blackened pieces matches the polished version attribute for attribute, so they reuse the same targets with no new balance judgement. The Lucerne hammer is the module's first two-handed blunt polearm and has no precedent in this rule set; the rationale is in the table.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_gothic_plate_blackend/body_armor | 120 | Base 65 at 20 kg, Plate; identical to the polished mc_gothic_plate |
+| items | mc_gothic_plate_blackend/head_armor | 30 | Base 15 at 20 kg, as above |
+| items | mc_gothic_plate_blackend/leg_armor | 45 | Base 20 at 20 kg, as above |
+| items | mc_gothic_sallet_helmet_blackend/head_armor | 130 | Base 60 at 4 kg, Plate; identical to the polished sallet |
+| items | mc_gothic_pauldron_blackend/body_armor | 40 | Base 25 at 5 kg; identical to the polished pauldron |
+| items | mc_gothic_gauntlets_blackend/arm_armor | 55 | Base 30 at 1.5 kg; identical to the polished gauntlets |
+| items | mc_gothic_boots_blackend/leg_armor | 55 | Base 30 at 3.5 kg; identical to the polished boots |
+| pieces | lucernehammer_point/Swing | 1.35 | Base 4.1, blunt, swing only; 215.86 cm overall at 3.5 kg. Two-handed weapons use 1.35 throughout this file (klingenmeister_blade, gilded dragon sword); the anti-armour edge of blunt damage is carried by damage_type="Blunt" and is not stacked into the factor |
+
+### Polished Gothic Plate set
+
 Seven new rules cover the five-piece Gothic Plate set added to the base module. Every base protection value, weight and material matches an existing plate item exactly, so each field reuses that item's target instead of a new balance judgement.
 
 | Kind | Item / field | Target | Reference and rationale |
@@ -267,7 +305,7 @@ Seven new rules cover the five-piece Gothic Plate set added to the base module. 
 
 ### Verification results
 
-`rbm_compat_items.xslt` now holds 95 rules and `rbm_compat_pieces.xslt` 28, all unique and numerically valid. Coverage is 100% for 61 items, 17 crafted weapons and 49 crafting pieces, with no gaps or orphans. All 127 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
+`rbm_compat_items.xslt` now holds 102 rules and `rbm_compat_pieces.xslt` 29, all unique and numerically valid. Coverage is 100% for 66 items, 18 crafted weapons and 51 crafting pieces, with no gaps or orphans. All 135 base-module names now have Chinese translations, and `verify_patch.ps1` passes every check.
 
 ---
 
@@ -489,6 +527,25 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ## RBM 互換設定の補完記録：2026-11-12
 
+### 黒鉄ゴシック・プレートとルツェルン・ハンマー
+
+8 件のルールを追加しました。黒鉄ゴシック・プレート一式 5 点の防御値 7 項目と、ルツェルン・ハンマーのダメージ 1 項目です。
+
+黒鉄版は各部位の元の防御値・重量・材質が原色版と項目ごとに完全一致しているため、原色版の設定値をそのまま適用し、新たなバランス判断は行っていません。ルツェルン・ハンマーは本 MOD 初の両手長柄鈍器であり、既存ルールに同種の先例がないため、設定理由を下表に記します。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_gothic_plate_blackend/body_armor | 120 | 元の値 65・重量 20 kg・Plate で、原色の mc_gothic_plate と同値 |
+| 装備 | mc_gothic_plate_blackend/head_armor | 30 | 元の値 15・重量 20 kg で、同上 |
+| 装備 | mc_gothic_plate_blackend/leg_armor | 45 | 元の値 20・重量 20 kg で、同上 |
+| 装備 | mc_gothic_sallet_helmet_blackend/head_armor | 130 | 元の値 60・重量 4 kg・Plate で、原色のサレット兜と同値 |
+| 装備 | mc_gothic_pauldron_blackend/body_armor | 40 | 元の値 25・重量 5 kg で、原色の肩甲と同値 |
+| 装備 | mc_gothic_gauntlets_blackend/arm_armor | 55 | 元の値 30・重量 1.5 kg で、原色の籠手と同値 |
+| 装備 | mc_gothic_boots_blackend/leg_armor | 55 | 元の値 30・重量 3.5 kg で、原色の脚甲と同値 |
+| パーツ | lucernehammer_point/Swing | 1.35 | 元の値 4.1・鈍撃・打撃のみ、全長 215.86 cm・重量 3.5 kg。本ファイルでは両手用を一律 1.35 としています（klingenmeister_blade、金装の双頭竜剣）。鈍撃の鎧貫通力は damage_type="Blunt" が担うため、係数には上乗せしていません |
+
+### ゴシック・プレート原色一式
+
 本体 MOD に追加されたゴシック・プレート一式 5 点に対応する 7 件のルールを追加しました。各部位の元の防御値・重量・材質は既存の板金装備と完全に一致するため、すべて対応する装備の設定値をそのまま踏襲し、新たなバランス判断は行っていません。
 
 | 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
@@ -503,7 +560,7 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ### 検証結果
 
-`rbm_compat_items.xslt` は 95 件、`rbm_compat_pieces.xslt` は 28 件となり、すべて一意で数値も妥当です。本体 MOD の装備 61 点・組み立て式武器 17 点・鍛冶パーツ 49 点を 100% 網羅し、未対応・孤立ルールはありません。名称 127 件すべてに中国語訳が入り、`verify_patch.ps1` も全項目通過しました。
+`rbm_compat_items.xslt` は 102 件、`rbm_compat_pieces.xslt` は 29 件となり、すべて一意で数値も妥当です。本体 MOD の装備 66 点・組み立て式武器 18 点・鍛冶パーツ 51 点を 100% 網羅し、未対応・孤立ルールはありません。名称 135 件すべてに中国語訳が入り、`verify_patch.ps1` も全項目通過しました。
 
 ---
 

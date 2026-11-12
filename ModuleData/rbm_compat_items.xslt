@@ -42,6 +42,16 @@
         <xsl:when test="$key='mc_gothic_pauldron/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_gothic_gauntlets/arm_armor'">55</xsl:when>
         <xsl:when test="$key='mc_gothic_boots/leg_armor'">55</xsl:when>
+        <!-- 2026-11-12: blackened Gothic set. Every base value, weight and
+             material matches its polished counterpart, so it inherits the
+             same targets rather than introducing a new tier. -->
+        <xsl:when test="$key='mc_gothic_plate_blackend/head_armor'">30</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate_blackend/body_armor'">120</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate_blackend/leg_armor'">45</xsl:when>
+        <xsl:when test="$key='mc_gothic_sallet_helmet_blackend/head_armor'">130</xsl:when>
+        <xsl:when test="$key='mc_gothic_pauldron_blackend/body_armor'">40</xsl:when>
+        <xsl:when test="$key='mc_gothic_gauntlets_blackend/arm_armor'">55</xsl:when>
+        <xsl:when test="$key='mc_gothic_boots_blackend/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_vaegir_guard_commander_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_helmet/head_armor'">125</xsl:when>
         <xsl:when test="$key='mc_vaegir_captain_shoulder/body_armor'">40</xsl:when>

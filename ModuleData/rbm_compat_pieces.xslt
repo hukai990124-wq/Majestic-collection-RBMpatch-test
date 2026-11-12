@@ -48,6 +48,12 @@
         <xsl:when test="$key='decorated_mace_blade/Swing'">1.30</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Thrust'">1.10</xsl:when>
         <xsl:when test="$key='gilded_dragon_sword_blade/Swing'">1.35</xsl:when>
+        <!-- 2026-11-12: Lucerne hammer head. Swing-only blunt head on a
+             two-handed haft (215.86 cm overall, 3.5 kg). Two-handed weapons
+             sit at 1.35 in this file (klingenmeister_blade, gilded dragon
+             sword); the anti-armour edge of a blunt head is already carried
+             by damage_type="Blunt", so the factor is not raised further. -->
+        <xsl:when test="$key='lucernehammer_point/Swing'">1.35</xsl:when>
         <xsl:otherwise><xsl:value-of select="." /></xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
