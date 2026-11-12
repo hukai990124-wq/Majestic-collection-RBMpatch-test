@@ -129,7 +129,7 @@ This patch contains no files from RBM or MajesticCollection. It only transforms 
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-11-12 更新。パッチのバージョンは v1.3.7 です。ゴシック・グラーフ・プレート一式 5 点（胸甲・サレット兜・肩甲・籠手・脚甲）とルツェルン・ハンマーの RBM 互換設定を追加しました。前版ではゴシック・プレート原色一式とテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-11-12 更新。パッチのバージョンは v1.3.7 です。ゴシック伯爵プレート一式 5 点（胸甲・サレット兜・肩甲・籠手・脚甲）とルツェルン鎚の RBM 互換設定を追加しました。前版ではゴシック・プレート原色一式とテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
@@ -139,8 +139,8 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 
 ## 今回の更新内容
 
-- ゴシック・グラーフ・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate_blackend（頭・胴・脚）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。各アイテムの元の値・重量・材質は原色版と完全に一致するため、原色版の目標値をそのまま適用しています。
-- ルツェルン・ハンマーの打撃（lucernehammer_point）に対応するダメージルールを 1 件追加しました。値は 1.35（両手用の帯、klingenmeister_blade を参照）。
+- ゴシック伯爵プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate_blackend（頭・胴・脚）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。各アイテムの元の値・重量・材質は原色版と完全に一致するため、原色版の目標値をそのまま適用しています。
+- ルツェルン鎚の打撃（lucernehammer_point）に対応するダメージルールを 1 件追加しました。値は 1.35（両手用の帯、klingenmeister_blade を参照）。
 - ゴシック・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate（頭・胴・脚）、mc_gothic_sallet_helmet、mc_gothic_pauldron、mc_gothic_gauntlets、mc_gothic_boots。
 - テルシオ・カバセット兜 mc_tercio_cabasset_helmet に対応する 1 件のルールを追加しました。
 - 長槍兵の肩甲 mc_terciopikeman_pauldron、長槍 terciopike_point、貴族佩剣 tercionoblerapier_blade に対応する 4 件のルールを追加しました。
