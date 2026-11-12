@@ -5,7 +5,7 @@
 <details>
 <summary><strong>简体中文</strong></summary>
 
-2026-11-12 更新，补丁版本 v1.3.7。本次为黑钢哥特板甲整套 5 件（胸甲、萨莱特盔、肩甲、手甲、战靴）与卢塞恩锤补齐 RBM 适配；此前一版已覆盖哥特板甲原色整套与大方阵卡巴塞头盔。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
+2026-11-12 更新，补丁版本 v1.3.7。本次为哥特伯爵板甲整套 5 件（胸甲、萨莱特盔、肩甲、手甲、战靴）与卢塞恩锤补齐 RBM 适配；此前一版已覆盖哥特板甲原色整套与大方阵卡巴塞头盔。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
 
@@ -15,7 +15,7 @@
 
 ## 本次更新
 
-- 新增 7 条规则，覆盖黑钢哥特板甲整套：mc_gothic_plate_blackend（头/身/腿三段）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。每件原始值、重量与材质均与原色版一致，直接沿用原色版目标值。
+- 新增 7 条规则，覆盖哥特伯爵板甲整套：mc_gothic_plate_blackend（头/身/腿三段）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。每件原始值、重量与材质均与原色版一致，直接沿用原色版目标值。
 - 新增 1 条伤害规则，覆盖卢塞恩锤 lucernehammer_point 的挥击段，取值为 1.35（双手档，参照 klingenmeister_blade）。
 - 新增 7 条规则，覆盖哥特板甲整套：mc_gothic_plate（头/身/腿三段）、mc_gothic_sallet_helmet、mc_gothic_pauldron、mc_gothic_gauntlets、mc_gothic_boots。
 - 新增 1 条规则，覆盖主模组新增的大方阵卡巴塞头盔 mc_tercio_cabasset_helmet。
@@ -67,7 +67,7 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 <details>
 <summary><strong>English</strong></summary>
 
-Updated on 2026-11-12. Patch version: v1.3.7. This update adds RBM compatibility for the blackened Gothic Plate set (cuirass, sallet, pauldron, gauntlets and boots) and for the Lucerne hammer. The previous version covered the polished Gothic Plate set and the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-12. Patch version: v1.3.7. This update adds RBM compatibility for the Gothic Graf Plate set (cuirass, sallet, pauldron, gauntlets and boots) and for the Lucerne hammer. The previous version covered the polished Gothic Plate set and the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -77,7 +77,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
-- Adds 7 rules for the blackened Gothic Plate set: mc_gothic_plate_blackend (head, body and leg), mc_gothic_sallet_helmet_blackend, mc_gothic_pauldron_blackend, mc_gothic_gauntlets_blackend and mc_gothic_boots_blackend. Every base value, weight and material matches the polished set, so the same targets apply.
+- Adds 7 rules for the Gothic Graf Plate set: mc_gothic_plate_blackend (head, body and leg), mc_gothic_sallet_helmet_blackend, mc_gothic_pauldron_blackend, mc_gothic_gauntlets_blackend and mc_gothic_boots_blackend. Every base value, weight and material matches the polished set, so the same targets apply.
 - Adds 1 damage rule for the swing of the Lucerne hammer head (lucernehammer_point), set to 1.35 (two-handed tier, following klingenmeister_blade).
 - Adds 7 rules for the full Gothic Plate set: mc_gothic_plate (head, body and leg), mc_gothic_sallet_helmet, mc_gothic_pauldron, mc_gothic_gauntlets and mc_gothic_boots.
 - Adds 1 rule for the new mc_tercio_cabasset_helmet.
@@ -129,7 +129,7 @@ This patch contains no files from RBM or MajesticCollection. It only transforms 
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-11-12 更新。パッチのバージョンは v1.3.7 です。黒鉄ゴシック・プレート一式 5 点（胸甲・サレット兜・肩甲・籠手・脚甲）とルツェルン・ハンマーの RBM 互換設定を追加しました。前版ではゴシック・プレート原色一式とテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-11-12 更新。パッチのバージョンは v1.3.7 です。ゴシック・グラーフ・プレート一式 5 点（胸甲・サレット兜・肩甲・籠手・脚甲）とルツェルン・ハンマーの RBM 互換設定を追加しました。前版ではゴシック・プレート原色一式とテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
@@ -139,7 +139,7 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 
 ## 今回の更新内容
 
-- 黒鉄ゴシック・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate_blackend（頭・胴・脚）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。各アイテムの元の値・重量・材質は原色版と完全に一致するため、原色版の目標値をそのまま適用しています。
+- ゴシック・グラーフ・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate_blackend（頭・胴・脚）、mc_gothic_sallet_helmet_blackend、mc_gothic_pauldron_blackend、mc_gothic_gauntlets_blackend、mc_gothic_boots_blackend。各アイテムの元の値・重量・材質は原色版と完全に一致するため、原色版の目標値をそのまま適用しています。
 - ルツェルン・ハンマーの打撃（lucernehammer_point）に対応するダメージルールを 1 件追加しました。値は 1.35（両手用の帯、klingenmeister_blade を参照）。
 - ゴシック・プレート一式に対応する 7 件のルールを追加しました：mc_gothic_plate（頭・胴・脚）、mc_gothic_sallet_helmet、mc_gothic_pauldron、mc_gothic_gauntlets、mc_gothic_boots。
 - テルシオ・カバセット兜 mc_tercio_cabasset_helmet に対応する 1 件のルールを追加しました。

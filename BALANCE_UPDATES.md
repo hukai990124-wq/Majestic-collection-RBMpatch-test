@@ -9,11 +9,11 @@
 
 ## RBM 补齐记录：2026-11-12
 
-### 黑钢哥特板甲与卢塞恩锤
+### 哥特伯爵板甲与卢塞恩锤
 
-本次新增 8 条规则：黑钢哥特板甲整套 5 件共 7 条护甲规则，卢塞恩锤 1 条伤害规则。
+本次新增 8 条规则：哥特伯爵板甲整套 5 件共 7 条护甲规则，卢塞恩锤 1 条伤害规则。
 
-黑钢版每一件的原始防护值、重量与材质都与原色版逐项相同（`plate_items.xml` 中五个属性块完全一致），因此直接沿用原色版目标值，不引入新的平衡判断。卢塞恩锤是本模组第一把双手长柄钝击武器，此前的规则集中没有同类先例，取值说明见下表。
+伯爵版每一件的原始防护值、重量与材质都与原色版逐项相同（`plate_items.xml` 中五个属性块完全一致），因此直接沿用原色版目标值，不引入新的平衡判断。卢塞恩锤是本模组第一把双手长柄钝击武器，此前的规则集中没有同类先例，取值说明见下表。
 
 | 类别 | 物品/字段 | 新目标值 | 参考与依据 |
 | --- | --- | --- | --- |
@@ -272,11 +272,11 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 
 ## RBM compatibility additions: 2026-11-12
 
-### Blackened Gothic Plate and the Lucerne hammer
+### Gothic Graf Plate and the Lucerne hammer
 
-Eight new rules: seven protection fields for the five-piece blackened Gothic set, plus one damage rule for the Lucerne hammer.
+Eight new rules: seven protection fields for the five-piece Gothic Graf set, plus one damage rule for the Lucerne hammer.
 
-Every base value, weight and material of the blackened pieces matches the polished version attribute for attribute, so they reuse the same targets with no new balance judgement. The Lucerne hammer is the module's first two-handed blunt polearm and has no precedent in this rule set; the rationale is in the table.
+Every base value, weight and material of the Graf pieces matches the polished version attribute for attribute, so they reuse the same targets with no new balance judgement. The Lucerne hammer is the module's first two-handed blunt polearm and has no precedent in this rule set; the rationale is in the table.
 
 | Kind | Item / field | Target | Reference and rationale |
 | --- | --- | --- | --- |
@@ -527,11 +527,11 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 ## RBM 互換設定の補完記録：2026-11-12
 
-### 黒鉄ゴシック・プレートとルツェルン・ハンマー
+### ゴシック・グラーフ・プレートとルツェルン・ハンマー
 
-8 件のルールを追加しました。黒鉄ゴシック・プレート一式 5 点の防御値 7 項目と、ルツェルン・ハンマーのダメージ 1 項目です。
+8 件のルールを追加しました。ゴシック・グラーフ・プレート一式 5 点の防御値 7 項目と、ルツェルン・ハンマーのダメージ 1 項目です。
 
-黒鉄版は各部位の元の防御値・重量・材質が原色版と項目ごとに完全一致しているため、原色版の設定値をそのまま適用し、新たなバランス判断は行っていません。ルツェルン・ハンマーは本 MOD 初の両手長柄鈍器であり、既存ルールに同種の先例がないため、設定理由を下表に記します。
+グラーフ版は各部位の元の防御値・重量・材質が原色版と項目ごとに完全一致しているため、原色版の設定値をそのまま適用し、新たなバランス判断は行っていません。ルツェルン・ハンマーは本 MOD 初の両手長柄鈍器であり、既存ルールに同種の先例がないため、設定理由を下表に記します。
 
 | 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
 | --- | --- | --- | --- |

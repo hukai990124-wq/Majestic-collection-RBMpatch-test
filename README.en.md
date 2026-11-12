@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
 
-Updated on 2026-11-12. Patch version: v1.3.7. This update adds RBM compatibility for the blackened Gothic Plate set (cuirass, sallet, pauldron, gauntlets and boots) and for the Lucerne hammer. The previous version covered the polished Gothic Plate set and the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-12. Patch version: v1.3.7. This update adds RBM compatibility for the Gothic Graf Plate set (cuirass, sallet, pauldron, gauntlets and boots) and for the Lucerne hammer. The previous version covered the polished Gothic Plate set and the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -12,7 +12,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
-- Adds 7 rules for the blackened Gothic Plate set: mc_gothic_plate_blackend (head, body and leg), mc_gothic_sallet_helmet_blackend, mc_gothic_pauldron_blackend, mc_gothic_gauntlets_blackend and mc_gothic_boots_blackend. Every base value, weight and material matches the polished set, so the same targets apply.
+- Adds 7 rules for the Gothic Graf Plate set: mc_gothic_plate_blackend (head, body and leg), mc_gothic_sallet_helmet_blackend, mc_gothic_pauldron_blackend, mc_gothic_gauntlets_blackend and mc_gothic_boots_blackend. Every base value, weight and material matches the polished set, so the same targets apply.
 - Adds 1 damage rule for the swing of the Lucerne hammer head (lucernehammer_point), set to 1.35 (two-handed tier, following klingenmeister_blade).
 - Adds 7 rules for the full Gothic Plate set: mc_gothic_plate (head, body and leg), mc_gothic_sallet_helmet, mc_gothic_pauldron, mc_gothic_gauntlets and mc_gothic_boots.
 - Adds 1 rule for the new mc_tercio_cabasset_helmet.
