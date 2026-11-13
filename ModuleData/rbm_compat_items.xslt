@@ -48,6 +48,9 @@
         <xsl:when test="$key='mc_gothic_plate_blackend/head_armor'">30</xsl:when>
         <xsl:when test="$key='mc_gothic_plate_blackend/body_armor'">120</xsl:when>
         <xsl:when test="$key='mc_gothic_plate_blackend/leg_armor'">45</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate_blackend_norope/head_armor'">30</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate_blackend_norope/body_armor'">120</xsl:when>
+        <xsl:when test="$key='mc_gothic_plate_blackend_norope/leg_armor'">45</xsl:when>
         <xsl:when test="$key='mc_gothic_sallet_helmet_blackend/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_gothic_pauldron_blackend/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_gothic_gauntlets_blackend/arm_armor'">55</xsl:when>
@@ -102,6 +105,11 @@
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_cape/head_armor'">15</xsl:when>
         <xsl:when test="$key='mc_landsknecht_doppelsoldner_cape/body_armor'">33</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_helmet_dragon/head_armor'">130</xsl:when>
+        <!-- 2026-11-14: plumed acanthus helmet added to the base module. Every
+             field (head 60, 4 kg, plate) is identical to
+             mc_gilded_acanthus_helmet and its dragon variant, both of which
+             already map to 130, so it takes the same target. -->
+        <xsl:when test="$key='mc_gilded_acanthus_helmet_pluma/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_horse_plate_armor/body_armor'">47</xsl:when>
         <xsl:when test="$key='mc_horse_plate_armor/head_armor'">90</xsl:when>
         <xsl:when test="$key='mc_horse_plate_armor/arm_armor'">57</xsl:when>

@@ -1,11 +1,33 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-12
+最新更新 / Latest / 最新：2026-11-14
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-14
+
+### 哥特伯爵无绳胸甲、镀金花草纹羽毛头盔与镀金卢塞恩锤
+
+本次新增 5 条规则：无绳版伯爵胸甲 3 条护甲规则、羽毛版花草纹头盔 1 条护甲规则、镀金卢塞恩锤 1 条伤害规则。
+
+三件物品的原始防护值、重量与材质都与同一系列中已有的物品逐项相同，因此直接沿用同族目标值，不引入新的平衡判断。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_gothic_plate_blackend_norope/head_armor | 30 | 原始 15、重量 20 kg、Plate，与带绳版 mc_gothic_plate_blackend 完全一致 |
+| 装备 | mc_gothic_plate_blackend_norope/body_armor | 120 | 原始 65、重量 20 kg，同上 |
+| 装备 | mc_gothic_plate_blackend_norope/leg_armor | 45 | 原始 20、重量 20 kg，同上 |
+| 装备 | mc_gilded_acanthus_helmet_pluma/head_armor | 130 | 原始 60、重量 4 kg、Plate，与原版 mc_gilded_acanthus_helmet 及金龙版完全相同 |
+| 武器 | lucernehammerg_point/Swing | 1.35 | 原始 4.1、钝击、仅挥击，锤头重 2.0 kg，与原版 lucernehammer_point 同档，沿用双手档 1.35 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 106 条、`rbm_compat_pieces.xslt` 共 30 条，全部唯一、数值合法。主模组 68 件装备、19 把组合武器、53 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。主模组 140 个名称均已有中文翻译，`verify_patch.ps1` 全项通过。
+
+---
 
 ## RBM 补齐记录：2026-11-12
 
@@ -270,6 +292,28 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-14
+
+### Rope-free Gothic Graf cuirass, plumed acanthus helmet and gilded Lucerne hammer
+
+Five new rules: three protection fields for the rope-free Graf cuirass, one for the plumed acanthus helmet, and one damage rule for the gilded Lucerne hammer.
+
+Every base protection value, weight and material of these three items matches an item already covered in the same family, so each reuses that family's target with no new balance judgement.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_gothic_plate_blackend_norope/head_armor | 30 | Base 15 at 20 kg, Plate; identical to the roped mc_gothic_plate_blackend |
+| items | mc_gothic_plate_blackend_norope/body_armor | 120 | Base 65 at 20 kg, as above |
+| items | mc_gothic_plate_blackend_norope/leg_armor | 45 | Base 20 at 20 kg, as above |
+| items | mc_gilded_acanthus_helmet_pluma/head_armor | 130 | Base 60 at 4 kg, Plate; identical to the plain mc_gilded_acanthus_helmet and its dragon variant |
+| pieces | lucernehammerg_point/Swing | 1.35 | Base 4.1, blunt, swing only, 2.0 kg head; same tier as the plain lucernehammer_point, which also uses the two-handed 1.35 |
+
+### Verification
+
+`rbm_compat_items.xslt` holds 106 rules and `rbm_compat_pieces.xslt` 30, all unique and numerically valid. The base module's 68 equipment items, 19 crafted weapons and 53 crafting pieces are covered 100%, with no gaps, no partial coverage and no orphan rules. All 140 base-module names have Chinese translations. `verify_patch.ps1` passes every check.
+
+---
+
 ## RBM compatibility additions: 2026-11-12
 
 ### Gothic Graf Plate and the Lucerne hammer
@@ -524,6 +568,28 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-14
+
+### 紐なしゴシック伯爵胸甲、羽根付きアカンサス兜、金装ルツェルン鎚
+
+5 件のルールを追加しました。紐なし伯爵胸甲の防御値 3 項目、羽根付きアカンサス兜の防御値 1 項目、金装ルツェルン鎚のダメージ 1 項目です。
+
+これら 3 点は、元の防御値・重量・材質が同系列の既存アイテムと項目ごとに完全一致しているため、同系列の設定値をそのまま適用し、新たなバランス判断は行っていません。
+
+| 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
+| --- | --- | --- | --- |
+| 装備 | mc_gothic_plate_blackend_norope/head_armor | 30 | 元の値 15・重量 20 kg・Plate で、紐付き版 mc_gothic_plate_blackend と完全に一致 |
+| 装備 | mc_gothic_plate_blackend_norope/body_armor | 120 | 元の値 65・重量 20 kg で、同上 |
+| 装備 | mc_gothic_plate_blackend_norope/leg_armor | 45 | 元の値 20・重量 20 kg で、同上 |
+| 装備 | mc_gilded_acanthus_helmet_pluma/head_armor | 130 | 元の値 60・重量 4 kg・Plate で、原版 mc_gilded_acanthus_helmet および金龍版と完全に一致 |
+| パーツ | lucernehammerg_point/Swing | 1.35 | 元の値 4.1・鈍撃・打撃のみ、鎚頭の重量 2.0 kg。原版 lucernehammer_point と同じ帯で、両手用の 1.35 を適用 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 106 件、`rbm_compat_pieces.xslt` は 30 件のルールを持ち、すべて一意で数値も妥当です。本体 MOD の装備 68 点・組み立て式武器 19 点・鍛冶パーツ 53 点を 100% カバーし、未対応・部分対応・孤立ルールはありません。本体 MOD の名称 140 件すべてに中国語翻訳があります。`verify_patch.ps1` は全項目を通過しています。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-12
 

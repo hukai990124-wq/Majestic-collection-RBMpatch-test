@@ -54,6 +54,7 @@
              sword); the anti-armour edge of a blunt head is already carried
              by damage_type="Blunt", so the factor is not raised further. -->
         <xsl:when test="$key='lucernehammer_point/Swing'">1.35</xsl:when>
+        <xsl:when test="$key='lucernehammerg_point/Swing'">1.35</xsl:when>
         <xsl:otherwise><xsl:value-of select="." /></xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
