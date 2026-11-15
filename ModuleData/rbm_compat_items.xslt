@@ -52,6 +52,13 @@
         <xsl:when test="$key='mc_gothic_plate_blackend_norope/body_armor'">120</xsl:when>
         <xsl:when test="$key='mc_gothic_plate_blackend_norope/leg_armor'">45</xsl:when>
         <xsl:when test="$key='mc_gothic_sallet_helmet_blackend/head_armor'">130</xsl:when>
+        <!-- 2026-11-14: plumed variant of the blackened sallet added to the base
+             module. Same head 60, 4 kg and Plate material as the plain sallet,
+             so it takes the same 130. -->
+        <xsl:when test="$key='mc_gothic_sallet_helmet_blackend_plume/head_armor'">130</xsl:when>
+        <!-- 2026-11-15: plumed variant of the polished sallet. Identical head 60,
+             4 kg and Plate material, so it takes the same 130. -->
+        <xsl:when test="$key='mc_gothic_sallet_helmet_plume/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_gothic_pauldron_blackend/body_armor'">40</xsl:when>
         <xsl:when test="$key='mc_gothic_gauntlets_blackend/arm_armor'">55</xsl:when>
         <xsl:when test="$key='mc_gothic_boots_blackend/leg_armor'">55</xsl:when>

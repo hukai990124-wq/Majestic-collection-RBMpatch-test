@@ -5,7 +5,7 @@
 <details>
 <summary><strong>简体中文</strong></summary>
 
-2026-11-14 更新，补丁版本 v1.3.8。本次为主模组新增的哥特伯爵板甲无绳胸甲、镀金花草纹羽毛头盔与镀金卢塞恩锤补齐 RBM 适配；此前两版已覆盖哥特板甲（原色与伯爵版整套）与大方阵卡巴塞头盔。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
+2026-11-15 更新，补丁版本 v1.3.9。本次为哥特萨莱特盔的两个羽饰版（原色版与伯爵版）补齐 RBM 适配；此前一版已覆盖哥特伯爵板甲无绳胸甲、镀金花草纹羽毛头盔与镀金卢塞恩锤。参照 RBM v4.5.4 / Bannerlord v1.4.8 的官方 XML 数据。本机未安装 RBM，已完成 XML/XSLT 转换校验，尚未进行游戏内平衡验证。
 
 ## 安装和加载顺序
 
@@ -15,6 +15,7 @@
 
 ## 本次更新
 
+- 新增 2 条规则，覆盖哥特萨莱特盔的两个羽饰版：mc_gothic_sallet_helmet_plume（原色）与 mc_gothic_sallet_helmet_blackend_plume（伯爵版）。两件原始值均为 60、4 kg、Plate，与非羽饰版完全相同，取同一档 130。
 - 新增 3 条规则，覆盖哥特伯爵板甲的无绳版胸甲 mc_gothic_plate_blackend_norope（头/身/腿三段）。原始值 15/65/20、20 kg 与带绳版逐项相同，沿用 30/120/45。
 - 新增 1 条规则，覆盖镀金花草纹羽毛头盔 mc_gilded_acanthus_helmet_pluma。原始值 60、4 kg、Plate 与原版及金龙版完全相同，取同一档 130。
 - 新增 1 条伤害规则，覆盖镀金卢塞恩锤 lucernehammerg_point 的挥击段，取 1.35，与原版卢塞恩锤同档。
@@ -29,8 +30,8 @@
 - 新增 10 条规则，覆盖西班牙方阵（Tercio）系列 6 件装备：精英头盔、精英胸甲、精英肩甲、精英战靴、精英护手与长矛兵胸甲。
 - 上述目标值全部沿用本补丁中原始防护值完全相同的既有规则，未引入新的平衡判断。
 - 删除 14 条指向已不存在物品的遗留规则，涉及旧 knightly 系列、gold_maxmilian 系列，以及两件改名前后的旧编号。当前已无孤儿规则。
-- 覆盖主模组 68 件装备、19 把组合武器和 53 个锻造部件；共 106 个防护字段和 30 个伤害系数，无遗漏项、无部分覆盖项。
-- 140 个物品和部件名称全部继承主模组的中文翻译。双头龙剑仍仅可双手使用。
+- 覆盖主模组 70 件装备、19 把组合武器和 55 个锻造部件；共 108 个防护字段和 30 个伤害系数，无遗漏项、无部分覆盖项。
+- 物品与部件名称沿用主模组的中文翻译。双头龙剑仍仅可双手使用。
 - 本补丁自本版本起以 **MIT 协议**开源发布，详见 [LICENSE](LICENSE)。
 
 所有新增数值、参考部件和取值依据见 [BALANCE_UPDATES.md](BALANCE_UPDATES.md)。新增数值是兼容性平衡目标，不代表已在战斗中验证。
@@ -70,7 +71,7 @@ RBM 官方源码：[Fellow93/RealisticBattleProject](https://github.com/Fellow93
 <details>
 <summary><strong>English</strong></summary>
 
-Updated on 2026-11-14. Patch version: v1.3.8. This update adds RBM compatibility for the new rope-free Gothic Graf cuirass, the plumed gilded acanthus helmet and the gilded Lucerne hammer. The two previous versions covered the full Gothic Plate sets (polished and Graf) and the Tercio cabasset helmet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-15. Patch version: v1.3.9. This update adds RBM compatibility for both plumed versions of the Gothic sallet (polished and Graf). The previous version covered the rope-free Gothic Graf cuirass, the plumed gilded acanthus helmet and the gilded Lucerne hammer. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -80,6 +81,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
+- Adds 2 rules for the two plumed Gothic sallets: mc_gothic_sallet_helmet_plume (polished) and mc_gothic_sallet_helmet_blackend_plume (Graf). Both have base 60 at 4 kg, plate, identical to the unplumed sallets, so both take the same 130.
 - Adds 3 rules for the rope-free Gothic Graf cuirass (mc_gothic_plate_blackend_norope): head, body and leg. Base values 15/65/20 at 20 kg match the roped version exactly, so the same 30/120/45 targets apply.
 - Adds 1 rule for the plumed gilded acanthus helmet (mc_gilded_acanthus_helmet_pluma). Base value 60 at 4 kg, plate, identical to the plain and dragon variants, so it takes the same 130.
 - Adds 1 damage rule for the swing of the gilded Lucerne hammer head (lucernehammerg_point), set to 1.35, the same tier as the plain Lucerne hammer.
@@ -94,8 +96,8 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 - Adds 10 rules covering the 6 Tercio series items: elite helmet, elite cuirass, elite shoulders, elite boots, elite gauntlets, and pikeman cuirass.
 - Every target value reuses an existing rule whose base-module protection value is identical, so no new balance judgement is introduced.
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
-- Covers the base mod's 68 equipment items, 19 crafted weapons, and 53 crafting pieces; 106 protection fields and 30 damage factors, with no gaps and no partial coverage.
-- All 140 item and piece names inherit the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
+- Covers the base mod's 70 equipment items, 19 crafted weapons, and 55 crafting pieces; 108 protection fields and 30 damage factors, with no gaps and no partial coverage.
+- Item and piece names follow the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
 - Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 
 See [BALANCE_UPDATES.md](BALANCE_UPDATES.md) for every added value, reference item, and rationale. These values are compatibility balance targets, not combat-tested results.
@@ -135,7 +137,7 @@ This patch contains no files from RBM or MajesticCollection. It only transforms 
 <details>
 <summary><strong>日本語</strong></summary>
 
-2026-11-14 更新。パッチのバージョンは v1.3.8 です。紐なしのゴシック伯爵プレート胸甲、羽根付き金装アカンサス兜、金装ルツェルン鎚の RBM 互換設定を追加しました。前々版と前版ではゴシック・プレート（原色と伯爵版の一式）とテルシオ・カバセット兜に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
+2026-11-15 更新。パッチのバージョンは v1.3.9 です。ゴシック・サレット兜の羽根付き 2 種（原色版と伯爵版）の RBM 互換設定を追加しました。前版では紐なしのゴシック伯爵プレート胸甲、羽根付き金装アカンサス兜、金装ルツェルン鎚に対応しています。RBM v4.5.4 / Bannerlord v1.4.8 の公式 XML データを参考にしています。開発環境には RBM がインストールされていません。XML/XSLT の変換検証は完了していますが、ゲーム内でのバランス検証は未実施です。
 
 ## インストールとロード順
 
@@ -145,6 +147,7 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 
 ## 今回の更新内容
 
+- ゴシック・サレット兜の羽根付き 2 種（原色版 mc_gothic_sallet_helmet_plume と伯爵版 mc_gothic_sallet_helmet_blackend_plume）に対応する 2 件のルールを追加しました。どちらも元の値 60・4 kg・プレートで羽根なし版と完全に一致するため、同じ 130 を適用しています。
 - 紐なしのゴシック伯爵プレート胸甲 mc_gothic_plate_blackend_norope（頭・胴・脚）に対応する 3 件のルールを追加しました。元の値 15/65/20・20 kg は紐付き版と完全に一致するため、30/120/45 をそのまま適用しています。
 - 羽根付き金装アカンサス兜 mc_gilded_acanthus_helmet_pluma に対応する 1 件のルールを追加しました。元の値 60・4 kg・プレートは原版および金龍版と完全に一致するため、同じ 130 を適用しています。
 - 金装ルツェルン鎚の打撃（lucernehammerg_point）に対応するダメージルールを 1 件追加しました。値は 1.35 で、原版ルツェルン鎚と同じ帯です。
@@ -159,8 +162,8 @@ MajesticCollection と MajesticCollection_RBM_Patch を、ゲームの Modules �
 - テルシオ（Tercio）シリーズ 6 点（エリート兜・エリート胸甲・エリート肩甲・エリートブーツ・エリート籠手・長槍兵胸甲）を対象に、10 件のルールを追加しました。
 - 目標値はすべて、本体 MOD 側の防御値が完全に一致する既存ルールを踏襲しており、新たなバランス判断は行っていません。
 - 本体 MOD から削除されたアイテムを対象としていた旧ルール 14 件（旧 knightly シリーズ、gold_maxmilian シリーズ、改名前の旧 ID 2 件）を削除しました。孤立したルールは残っていません。
-- 本体 MOD の装備 68 点、組み立て式武器 19 点、鍛冶パーツ 53 点を対象とし、防御値 106 項目・ダメージ係数 30 項目に対応しています。未対応・部分対応はありません。
-- 名称 140 件すべてが本体 MOD の中国語翻訳を継承しています。金装の双頭竜剣は両手専用のままです。
+- 本体 MOD の装備 70 点、組み立て式武器 19 点、鍛冶パーツ 55 点を対象とし、防御値 108 項目・ダメージ係数 30 項目に対応しています。未対応・部分対応はありません。
+- アイテムとパーツの名称は本体 MOD の中国語翻訳を踏襲しています。金装の双頭竜剣は両手専用のままです。
 - 本バージョンより、本パッチは **MIT ライセンス** で公開されます。詳細は [LICENSE](LICENSE) を参照してください。
 
 追加した数値、参照アイテム、設定理由は [BALANCE_UPDATES.md](BALANCE_UPDATES.md) を参照してください。これらの数値は互換性のためのバランス調整目標であり、実戦で検証済みの値ではありません。
