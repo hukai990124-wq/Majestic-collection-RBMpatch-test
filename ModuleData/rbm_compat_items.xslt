@@ -14,6 +14,9 @@
     <xsl:attribute name="{name()}">
       <xsl:choose>
         <xsl:when test="$key='mc_royal_conqueror_helmet/head_armor'">120</xsl:when>
+        <!-- 2026-11-20: plumed variant of the Royal Conqueror helmet. Identical
+             head 55, 4 kg and Plate material, so it takes the same 120. -->
+        <xsl:when test="$key='mc_royal_conqueror_helmet_with_plume/head_armor'">120</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_cuirass/head_armor'">25</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_cuirass/body_armor'">110</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_cuirass/leg_armor'">35</xsl:when>

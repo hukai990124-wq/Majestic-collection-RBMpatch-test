@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
 
-Updated on 2026-11-15. Patch version: v1.3.9. This update adds RBM compatibility for both plumed versions of the Gothic sallet (polished and Graf). The previous version covered the rope-free Gothic Graf cuirass, the plumed gilded acanthus helmet and the gilded Lucerne hammer. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
+Updated on 2026-11-20. Patch version: v1.3.10. This update adds RBM compatibility for the new plumed Royal Conqueror helmet (mc_royal_conqueror_helmet_with_plume). The previous version covered both plumed versions of the Gothic sallet. Official XML data from RBM v4.5.4 / Bannerlord v1.4.8 is used as a reference. RBM is not installed on the development machine. XML/XSLT transformation checks have passed; gameplay balance has not been tested in game.
 
 ## Installation and load order
 
@@ -12,6 +12,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 
 ## What's included in this update
 
+- Adds 1 rule for the new plumed Royal Conqueror helmet (mc_royal_conqueror_helmet_with_plume). Base value 55 at 4 kg, plate, identical to the plain Royal Conqueror helmet, so it takes the same 120.
 - Adds 2 rules for the two plumed Gothic sallets: mc_gothic_sallet_helmet_plume (polished) and mc_gothic_sallet_helmet_blackend_plume (Graf). Both have base 60 at 4 kg, plate, identical to the unplumed sallets, so both take the same 130.
 - Adds 3 rules for the rope-free Gothic Graf cuirass (mc_gothic_plate_blackend_norope): head, body and leg. Base values 15/65/20 at 20 kg match the roped version exactly, so the same 30/120/45 targets apply.
 - Adds 1 rule for the plumed gilded acanthus helmet (mc_gilded_acanthus_helmet_pluma). Base value 60 at 4 kg, plate, identical to the plain and dragon variants, so it takes the same 130.
@@ -27,7 +28,7 @@ Enable them in this order: RBM → MajesticCollection → MajesticCollection_RBM
 - Adds 10 rules covering the 6 Tercio series items: elite helmet, elite cuirass, elite shoulders, elite boots, elite gauntlets, and pikeman cuirass.
 - Every target value reuses an existing rule whose base-module protection value is identical, so no new balance judgement is introduced.
 - Removes 14 legacy rules that pointed at items no longer present in the base mod: the old knightly series, the gold_maxmilian series, and two ids that have since been renamed. No orphan rules remain.
-- Covers the base mod's 70 equipment items, 19 crafted weapons, and 55 crafting pieces; 108 protection fields and 30 damage factors, with no gaps and no partial coverage.
+- Covers the base mod's 71 equipment items, 19 crafted weapons, and 55 crafting pieces; 109 protection fields and 30 damage factors, with no gaps and no partial coverage.
 - Item and piece names follow the base mod's Chinese translations. The gilded dragon sword remains two-handed only.
 - Starting with this version, the patch is released under the **MIT License**; see [LICENSE](LICENSE).
 

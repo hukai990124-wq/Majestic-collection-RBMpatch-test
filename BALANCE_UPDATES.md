@@ -1,11 +1,29 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-15
+最新更新 / Latest / 最新：2026-11-20
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-20
+
+### 皇家征服者羽饰头盔
+
+新增 1 条规则：主模组新增的皇家征服者羽饰头盔 mc_royal_conqueror_helmet_with_plume 的头部护甲。该物品是原版 mc_royal_conqueror_helmet 拆分出的带羽毛版本，原始防护值 55、重量 4 kg、Plate 材质与原版逐项相同，因此沿用同族目标值 120，不引入新的平衡判断。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_royal_conqueror_helmet_with_plume/head_armor | 120 | 原始 55、重量 4 kg、Plate，与 mc_royal_conqueror_helmet 完全一致 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 109 条、`rbm_compat_pieces.xslt` 共 30 条。主模组 71 件装备、19 把组合武器、55 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。XSLT 实际转换校验：109 个防护字段与 30 个伤害系数全部按规则生效。
+
+中文名称校验目前会拦下 mc_terciopikeman_pauldron（大方阵长矛兵肩甲正在返工，名称待补），该项与本次规则无关。
+
+---
 
 ## RBM 补齐记录：2026-11-15
 
@@ -313,6 +331,24 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-20
+
+### Plumed Royal Conqueror helmet
+
+One new rule: the head armor of the plumed Royal Conqueror helmet (mc_royal_conqueror_helmet_with_plume) added to the base mod. This item is the feathered variant split off from the plain mc_royal_conqueror_helmet. Base protection 55, weight 4 kg and plate material match the plain helmet exactly, so it reuses the family target of 120 with no new balance judgement.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_royal_conqueror_helmet_with_plume/head_armor | 120 | Base 55 at 4 kg, Plate; identical to mc_royal_conqueror_helmet |
+
+### Verification
+
+`rbm_compat_items.xslt` holds 109 rules and `rbm_compat_pieces.xslt` 30. The base module's 71 equipment items, 19 crafted weapons and 55 crafting pieces are covered 100%, with no gaps, no partial coverage and no orphan rules. XSLT transformation checks: all 109 protection fields and 30 damage factors apply as intended.
+
+The Chinese name check currently flags mc_terciopikeman_pauldron (the pikeman pauldron is being reworked and its name is pending). This is unrelated to the rule added here.
+
+---
+
 ## RBM compatibility additions: 2026-11-15
 
 ### Both plumed versions of the Gothic sallet
@@ -610,6 +646,24 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-20
+
+### 羽根付きロイヤル・コンケラー兜
+
+新規ルール 1 件：本体 MOD に追加された羽根付きロイヤル・コンケラー兜 mc_royal_conqueror_helmet_with_plume の防御値。このアイテムは羽根なしの mc_royal_conqueror_helmet から分離した羽根付き版で、元の防御値 55・重量 4 kg・材質プレートは羽根なし版と完全に一致するため、同系列の目標値 120 をそのまま適用し、新たなバランス判断は行っていません。
+
+| 種別 | アイテム / 項目 | 目標値 | 参考と根拠 |
+| --- | --- | --- | --- |
+| items | mc_royal_conqueror_helmet_with_plume/head_armor | 120 | 元の値 55・4 kg・プレート。mc_royal_conqueror_helmet と完全に一致 |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 109 件、`rbm_compat_pieces.xslt` は 30 件のルールを持ちます。本体 MOD の装備 71 点・組み立て式武器 19 点・鍛冶パーツ 55 点を 100% カバーし、未対応・部分対応・孤立ルールはありません。XSLT の実変換検証では、防御値 109 項目とダメージ係数 30 項目がすべて意図どおり適用されています。
+
+中国語名称の検査は現在 mc_terciopikeman_pauldron で停止します（長槍兵の肩甲は作り直し中で名称が未設定）。これは今回追加したルールとは無関係です。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-15
 
