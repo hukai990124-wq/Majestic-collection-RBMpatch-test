@@ -9,7 +9,7 @@
 
 ## 安装和加载顺序
 
-将 MajesticCollection 与 MajesticCollection_RBM_Patch 并列放在游戏的 Modules 文件夹中。
+将 MajesticCollection 与 MajesticCollection_RBM_Patch 并列放在游戏的 Modules 文件夹中。将于本体2.0版本以后计划公布于Nexus
 
 启用顺序：RBM → MajesticCollection → MajesticCollection_RBM_Patch。补丁必须在主模组和 RBM 之后加载。未使用 RBM 时只启用 MajesticCollection。
 
