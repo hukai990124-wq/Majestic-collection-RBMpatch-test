@@ -1,11 +1,35 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-20
+最新更新 / Latest / 最新：2026-11-23
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-23
+
+### 开面重型头盔与移除测试装备规则
+
+本次净变化：新增 1 条规则，删除 2 条规则，总数由 109 条降为 108 条。
+
+新增规则覆盖主模组新增的马克西米利安重型头盔开面版 mc_maximilian_heavy_helmet_open。其头部原始防护值 60、重量 4 kg、Plate 材质，与闭面版 mc_maximilian_heavy_helmet 逐项相同，因此沿用目标值 130，不引入新的平衡判断。
+
+删除的两条规则指向主模组已移除的 sol 测试装备：mc_sol_boots/leg_armor（55）与 mc_sol_helmet/head_armor（130）。对应的 sol_items.xml 及两条中文测试词条（测试头盔、测试战靴）也已从主模组清除。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_maximilian_heavy_helmet_open/head_armor | 130 | 原始 60、重量 4 kg、Plate，与 mc_maximilian_heavy_helmet 完全一致 |
+| 装备（删除） | mc_sol_boots/leg_armor | — | 物品已从主模组移除 |
+| 装备（删除） | mc_sol_helmet/head_armor | — | 物品已从主模组移除 |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 108 条、`rbm_compat_pieces.xslt` 共 30 条。主模组 70 件装备、19 把组合武器、55 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。XSLT 实际转换校验：108 个防护字段与 30 个伤害系数全部按规则生效。
+
+中文名称校验目前会拦下 mc_terciopikeman_pauldron（大方阵长矛兵肩甲正在返工，名称待补），该项与本次规则无关。
+
+---
 
 ## RBM 补齐记录：2026-11-20
 
@@ -74,7 +98,7 @@
 
 本次新增 8 条规则：哥特伯爵板甲整套 5 件共 7 条护甲规则，卢塞恩锤 1 条伤害规则。
 
-伯爵版每一件的原始防护值、重量与材质都与原色版逐项相同（`plate_items.xml` 中五个属性块完全一致），因此直接沿用原色版目标值，不引入新的平衡判断。卢塞恩锤是本模组第一把双手长柄钝击武器，此前的规则集中没有同类先例，取值说明见下表。
+伯爵版每一件的原始防护值、重量与材质都与原色版逐项相同（`plate_items.xml` 中五个属性块完全一致），因此直接沿用原色版目标值，不引入新的平衡判断。卢塞恩锤是本模组第一把双手钝击武器（采用双手斧锻造模板），此前的规则集中没有同类先例，取值说明见下表。
 
 | 类别 | 物品/字段 | 新目标值 | 参考与依据 |
 | --- | --- | --- | --- |
@@ -331,6 +355,30 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-23
+
+### Open-face heavy helmet and removal of the test items
+
+Net change: one rule added, two removed, taking the total from 109 to 108.
+
+The new rule covers the open-face Maximilian heavy helmet (mc_maximilian_heavy_helmet_open) added to the base mod. Its base head protection 60, weight 4 kg and plate material match the closed-face mc_maximilian_heavy_helmet exactly, so it reuses the target of 130 with no new balance judgement.
+
+The two removed rules pointed at sol test items deleted from the base mod: mc_sol_boots/leg_armor (55) and mc_sol_helmet/head_armor (130). The sol_items.xml file and its two Chinese test strings (测试头盔, 测试战靴) were also removed from the base mod.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_maximilian_heavy_helmet_open/head_armor | 130 | Base 60 at 4 kg, Plate; identical to mc_maximilian_heavy_helmet |
+| items (removed) | mc_sol_boots/leg_armor | — | Item deleted from the base mod |
+| items (removed) | mc_sol_helmet/head_armor | — | Item deleted from the base mod |
+
+### Verification
+
+`rbm_compat_items.xslt` holds 108 rules and `rbm_compat_pieces.xslt` 30. The base module's 70 equipment items, 19 crafted weapons and 55 crafting pieces are covered 100%, with no gaps, no partial coverage and no orphan rules. XSLT transformation checks: all 108 protection fields and 30 damage factors apply as intended.
+
+The Chinese name check currently flags mc_terciopikeman_pauldron (the pikeman pauldron is being reworked and its name is pending). This is unrelated to the rules changed here.
+
+---
+
 ## RBM compatibility additions: 2026-11-20
 
 ### Plumed Royal Conqueror helmet
@@ -398,7 +446,7 @@ Every base protection value, weight and material of these three items matches an
 
 Eight new rules: seven protection fields for the five-piece Gothic Graf set, plus one damage rule for the Lucerne hammer.
 
-Every base value, weight and material of the Graf pieces matches the polished version attribute for attribute, so they reuse the same targets with no new balance judgement. The Lucerne hammer is the module's first two-handed blunt polearm and has no precedent in this rule set; the rationale is in the table.
+Every base value, weight and material of the Graf pieces matches the polished version attribute for attribute, so they reuse the same targets with no new balance judgement. The Lucerne hammer is the module's first two-handed blunt weapon (it uses the two-handed axe crafting template) and has no precedent in this rule set; the rationale is in the table.
 
 | Kind | Item / field | Target | Reference and rationale |
 | --- | --- | --- | --- |
@@ -647,6 +695,30 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 <details>
 <summary><strong>日本語</strong></summary>
 
+## RBM 互換設定の補完記録：2026-11-23
+
+### 開面版重型兜とテスト装備ルールの削除
+
+今回の純変化：ルールを 1 件追加し 2 件削除、合計が 109 件から 108 件になりました。
+
+追加したルールは本体 MOD に追加されたマクシミリアン重型兜の開面版 mc_maximilian_heavy_helmet_open です。元の防御値 60・重量 4 kg・材質プレートは閉面版 mc_maximilian_heavy_helmet と完全に一致するため、目標値 130 をそのまま適用し、新たなバランス判断は行っていません。
+
+削除した 2 件のルールは、本体 MOD から削除された sol テスト装備を対象としていました：mc_sol_boots/leg_armor（55）と mc_sol_helmet/head_armor（130）。sol_items.xml と中国語のテスト翻訳 2 件（测试头盔、测试战靴）も本体 MOD から削除されています。
+
+| 種別 | アイテム / 項目 | 目標値 | 参考と根拠 |
+| --- | --- | --- | --- |
+| items | mc_maximilian_heavy_helmet_open/head_armor | 130 | 元の値 60・4 kg・プレート。mc_maximilian_heavy_helmet と完全に一致 |
+| items（削除） | mc_sol_boots/leg_armor | — | アイテムが本体 MOD から削除されたため |
+| items（削除） | mc_sol_helmet/head_armor | — | アイテムが本体 MOD から削除されたため |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 108 件、`rbm_compat_pieces.xslt` は 30 件のルールを持ちます。本体 MOD の装備 70 点・組み立て式武器 19 点・鍛冶パーツ 55 点を 100% カバーし、未対応・部分対応・孤立ルールはありません。XSLT の実変換検証では、防御値 108 項目とダメージ係数 30 項目がすべて意図どおり適用されています。
+
+中国語名称の検査は現在 mc_terciopikeman_pauldron で停止します（長槍兵の肩甲は作り直し中で名称が未設定）。今回変更したルールとは無関係です。
+
+---
+
 ## RBM 互換設定の補完記録：2026-11-20
 
 ### 羽根付きロイヤル・コンケラー兜
@@ -714,7 +786,7 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 8 件のルールを追加しました。ゴシック伯爵プレート一式 5 点の防御値 7 項目と、ルツェルン鎚のダメージ 1 項目です。
 
-伯爵版は各部位の元の防御値・重量・材質が原色版と項目ごとに完全一致しているため、原色版の設定値をそのまま適用し、新たなバランス判断は行っていません。ルツェルン鎚は本 MOD 初の両手長柄鈍器であり、既存ルールに同種の先例がないため、設定理由を下表に記します。
+伯爵版は各部位の元の防御値・重量・材質が原色版と項目ごとに完全一致しているため、原色版の設定値をそのまま適用し、新たなバランス判断は行っていません。ルツェルン鎚は本 MOD 初の両手鈍器であり（両手斧の鍛冶テンプレートを使用）、既存ルールに同種の先例がないため、設定理由を下表に記します。
 
 | 分類 | アイテム / 項目 | 新しい設定値 | 参照元と設定理由 |
 | --- | --- | --- | --- |
