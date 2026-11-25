@@ -82,9 +82,13 @@
         <xsl:when test="$key='mc_maximilian_heavy_boots/leg_armor'">55</xsl:when>
         <xsl:when test="$key='mc_maximilian_jousting_helmet/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_maximilian_heavy_helmet/head_armor'">130</xsl:when>
+        <!-- 2026-11-26: plumed variants of the heavy helmet. Identical
+             head 60, 4 kg and Plate material, so both take the same 130. -->
+        <xsl:when test="$key='mc_maximilian_heavy_helmet_plume/head_armor'">130</xsl:when>
         <!-- 2026-11-23: open-face variant of the heavy helmet. Identical
              head 60, 4 kg and Plate material, so it takes the same 130. -->
         <xsl:when test="$key='mc_maximilian_heavy_helmet_open/head_armor'">130</xsl:when>
+        <xsl:when test="$key='mc_maximilian_heavy_helmet_open_plume/head_armor'">130</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_shield/body_armor'">15</xsl:when>
         <xsl:when test="$key='mc_royal_conqueror_shield/hit_points'">2000</xsl:when>
         <xsl:when test="$key='mc_gilded_acanthus_shield/body_armor'">18</xsl:when>

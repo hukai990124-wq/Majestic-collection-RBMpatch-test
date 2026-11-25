@@ -1,11 +1,36 @@
 # RBM Balance Updates
 
-最新更新 / Latest / 最新：2026-11-23
+最新更新 / Latest / 最新：2026-11-26
 
 点击语言标题展开或收起。 / Click a language to expand or collapse. / 言語名をクリックして開閉してください。
 
 <details>
 <summary><strong>简体中文</strong></summary>
+
+## RBM 补齐记录：2026-11-26
+
+### 两顶羽饰马克西米利安重型头盔
+
+本次共新增 4 条规则：两顶羽饰盔的头部护甲，以及双手剑 schwur 刀刃的两条伤害规则。
+
+闭面羽饰版 mc_maximilian_heavy_helmet_plume 与开面羽饰版 mc_maximilian_heavy_helmet_open_plume 的原始防护值 60、重量 4 kg、Plate 材质，与各自的非羽饰版逐项相同，因此沿用目标值 130。schwur 是双手剑，刀刃原始 Pierce 5.4 / Cut 6.1，与 klingenmeister 同档，取 Thrust 1.10 / Swing 1.35。均不引入新的平衡判断。
+
+| 类别 | 物品/字段 | 新目标值 | 参考与依据 |
+| --- | --- | --- | --- |
+| 装备 | mc_maximilian_heavy_helmet_plume/head_armor | 130 | 原始 60、重量 4 kg、Plate，与 mc_maximilian_heavy_helmet 完全一致 |
+| 装备 | mc_maximilian_heavy_helmet_open_plume/head_armor | 130 | 原始 60、重量 4 kg、Plate，与 mc_maximilian_heavy_helmet_open 完全一致 |
+| 武器 | schwur_blade/Thrust | 1.10 | 原始 5.4、Pierce，双手剑档，同 klingenmeister_blade |
+| 武器 | schwur_blade/Swing | 1.35 | 原始 6.1、Cut，双手剑档，同 klingenmeister_blade |
+
+### 校验结果
+
+`rbm_compat_items.xslt` 规则共 110 条、`rbm_compat_pieces.xslt` 共 32 条。主模组 73 件装备、20 把组合武器、59 个锻造部件 100% 覆盖，无遗漏项、无部分覆盖项、无孤儿规则。XSLT 实际转换校验：110 个防护字段与 32 个伤害系数全部按规则生效。
+
+中文名称校验目前会拦下 mc_terciopikeman_pauldron（大方阵长矛兵肩甲正在返工，名称待补），该项与本次规则无关。
+
+**统计口径修正**：此前 v1.3.11 文档记的 70 件装备 / 108 防护字段 / 30 伤害系数漏算了部分数据文件，本版改用逐文件实测值 73 / 110 / 32。
+
+---
 
 ## RBM 补齐记录：2026-11-23
 
@@ -355,6 +380,31 @@ tools/verify_patch.ps1：44 件装备、14 把组合武器、39 个部件、97 �
 <details>
 <summary><strong>English</strong></summary>
 
+## RBM compatibility additions: 2026-11-26
+
+### Two plumed Maximilian heavy helmets
+
+Four new rules: the head armor of the two plumed helmets (closed-face mc_maximilian_heavy_helmet_plume and open-face mc_maximilian_heavy_helmet_open_plume), plus two damage rules for the two-handed sword schwur.
+
+Both plumed helmets have base protection 60, weight 4 kg and plate material, matching their unplumed counterparts exactly, so each reuses the target of 130. Schwur is a two-handed sword with base Pierce 5.4 / Cut 6.1, the same tier as klingenmeister, so it takes Thrust 1.10 / Swing 1.35. No new balance judgement is introduced.
+
+| Kind | Item / field | Target | Reference and rationale |
+| --- | --- | --- | --- |
+| items | mc_maximilian_heavy_helmet_plume/head_armor | 130 | Base 60 at 4 kg, Plate; identical to mc_maximilian_heavy_helmet |
+| items | mc_maximilian_heavy_helmet_open_plume/head_armor | 130 | Base 60 at 4 kg, Plate; identical to mc_maximilian_heavy_helmet_open |
+| pieces | schwur_blade/Thrust | 1.10 | Base 5.4, Pierce; two-handed tier, same as klingenmeister_blade |
+| pieces | schwur_blade/Swing | 1.35 | Base 6.1, Cut; two-handed tier, same as klingenmeister_blade |
+
+### Verification
+
+`rbm_compat_items.xslt` holds 110 rules and `rbm_compat_pieces.xslt` 32. The base module's 73 equipment items, 20 crafted weapons and 59 crafting pieces are covered 100%, with no gaps, no partial coverage and no orphan rules. XSLT transformation checks: all 110 protection fields and 32 damage factors apply as intended.
+
+The Chinese name check currently flags mc_terciopikeman_pauldron (the pikeman pauldron is being reworked and its name is pending). This is unrelated to the rules added here.
+
+**Counting correction**: the previous v1.3.11 document reported 70 items / 108 protection fields / 30 damage factors, which missed some data files. This version uses per-file measured values of 73 / 110 / 32.
+
+---
+
 ## RBM compatibility additions: 2026-11-23
 
 ### Open-face heavy helmet and removal of the test items
@@ -694,6 +744,31 @@ tools/verify_patch.ps1 passed for 44 equipment items, 14 crafted weapons, 39 cra
 
 <details>
 <summary><strong>日本語</strong></summary>
+
+## RBM 互換設定の補完記録：2026-11-26
+
+### 羽根付きマクシミリアン重型兜 2 種
+
+新規ルール 4 件：羽根付き兜 2 種（閉面版 mc_maximilian_heavy_helmet_plume と開面版 mc_maximilian_heavy_helmet_open_plume）の防御値と、両手剣 schwur のダメージ 2 件。
+
+羽根付き兜はどちらも元の防御値 60・重量 4 kg・材質プレートで羽根なし版と完全に一致するため、目標値 130 を適用しています。schwur は両手剣で刀身の元の値が Pierce 5.4 / Cut 6.1、klingenmeister と同帯のため Thrust 1.10 / Swing 1.35 を適用しています。新たなバランス判断は行っていません。
+
+| 種別 | アイテム / 項目 | 目標値 | 参考と根拠 |
+| --- | --- | --- | --- |
+| items | mc_maximilian_heavy_helmet_plume/head_armor | 130 | 元の値 60・4 kg・プレート。mc_maximilian_heavy_helmet と完全に一致 |
+| items | mc_maximilian_heavy_helmet_open_plume/head_armor | 130 | 元の値 60・4 kg・プレート。mc_maximilian_heavy_helmet_open と完全に一致 |
+| pieces | schwur_blade/Thrust | 1.10 | 元の値 5.4・貫通。両手用の帯、klingenmeister_blade と同じ |
+| pieces | schwur_blade/Swing | 1.35 | 元の値 6.1・切断。両手用の帯、klingenmeister_blade と同じ |
+
+### 検証結果
+
+`rbm_compat_items.xslt` は 110 件、`rbm_compat_pieces.xslt` は 32 件のルールを持ちます。本体 MOD の装備 73 点・組み立て式武器 20 点・鍛冶パーツ 59 点を 100% カバーし、未対応・部分対応・孤立ルールはありません。XSLT の実変換検証では、防御値 110 項目とダメージ係数 32 項目がすべて意図どおり適用されています。
+
+中国語名称の検査は現在 mc_terciopikeman_pauldron で停止します（長槍兵の肩甲は作り直し中で名称が未設定）。今回追加したルールとは無関係です。
+
+**集計方法の修正**：前回の v1.3.11 では装備 70 点・防御値 108 項目・ダメージ係数 30 項目と記載していましたが、一部データファイルの集計漏れでした。今回はファイルごとの実測値 73 / 110 / 32 を使用しています。
+
+---
 
 ## RBM 互換設定の補完記録：2026-11-23
 

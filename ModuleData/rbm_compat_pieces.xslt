@@ -20,6 +20,9 @@
         <xsl:when test="$key='joyeuse_blade/Swing'">1.00</xsl:when>
         <xsl:when test="$key='klingenmeister_blade/Thrust'">1.10</xsl:when>
         <xsl:when test="$key='klingenmeister_blade/Swing'">1.35</xsl:when>
+        <!-- 2026-11-26: schwur, a two-handed sword. Same tier as klingenmeister. -->
+        <xsl:when test="$key='schwur_blade/Thrust'">1.10</xsl:when>
+        <xsl:when test="$key='schwur_blade/Swing'">1.35</xsl:when>
         <xsl:when test="$key='maximilian_jousting_lance_blade/Thrust'">1.30</xsl:when>
         <xsl:when test="$key='royal_partisan_blade/Thrust'">1.20</xsl:when>
         <xsl:when test="$key='royal_partisan_blade/Swing'">0.85</xsl:when>
